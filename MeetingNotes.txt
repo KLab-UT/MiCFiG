@@ -1,2 +1,2 @@
 Aug 22, 2023 Meeting notes (w/ Dante and Randy)
-For this project, you will be working with the same clean data from the NGS_mapping_and_phylodist repository, but now it needs to be mapped to the annotated A. marmoratus genome. The fasta and gff file for the marmoratus genome are located within the directory /scratch/general/nfs1/utu_4310/whiptail_nmt_variation_data/references on lonepeak (a cluster on the CHPC).
+For this project, you will be working with the same clean data from the NGS_mapping_and_phylodist repository, but now it needs to be mapped to the annotated A. marmoratus genome. The fasta and gff file for the marmoratus genome are located within the directory /scratch/general/nfs1/utu/whiptail_refs on lonepeak (a cluster on the CHPC).
