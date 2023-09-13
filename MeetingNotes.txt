@@ -1,2 +1,7 @@
+Sep 13, 2023 Meeting notes (w/ Erin, Dante, and Randy)
+1. Erin will create python script to search gff for Nmt genes
+- video on regular expressions: https://www.youtube.com/watch?v=UQQsYXa1EHs
+- Useful url for using regular expressions: https://github.com/joaks1/python-regex-notes
+
 Aug 22, 2023 Meeting notes (w/ Dante and Randy)
 For this project, you will be working with the same clean data from the NGS_mapping_and_phylodist repository, but now it needs to be mapped to the annotated A. marmoratus genome. The fasta and gff file for the marmoratus genome are located within the directory /scratch/general/nfs1/utu/whiptail_refs on lonepeak (a cluster on the CHPC).
