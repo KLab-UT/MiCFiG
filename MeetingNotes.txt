@@ -1,3 +1,8 @@
+Sep 20, 2023 meeting notes (w/ Erin, Dante, and Randy)
+1. Erin will work on python script to search gff for Nmt genes
+- Try first without regular expressions
+- After you get this working, look into regular expressions (see videos below from Sep 13 meeting)
+
 Sep 13, 2023 Meeting notes (w/ Erin, Dante, and Randy)
 1. Erin will create python script to search gff for Nmt genes
 - video on regular expressions: https://www.youtube.com/watch?v=UQQsYXa1EHs

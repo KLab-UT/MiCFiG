@@ -14,9 +14,26 @@ import sys
 # Functions here
 
 if __name__ == "__main__":
-    with open(sys.argv[1], 'r') as mito_carta_file:
-        with open(sys.argv[2], 'r') as gff_file_in:
-            with open(sys.argv[3], 'w') as gff_file_out:
-                # for each line in mito_carta_file, create search criteria
-                    # for each line in gff_file_in, check search criteria created above
-                        # if search criteria matches gff_file_in line, write this line to gff_file_out
+    mito_carta_file = open(sys.argv[1], 'r')
+    gff_file_in = open(sys.argv[2], 'r')
+    gff_file_out = open(sys.argv[3], 'w')
+    # for each line in mito_carta_file, create search criteria
+    mito_carta_file.readline()
+    for line in mito_carta_file:
+        print(line)
+        # split the line up, and only select the element that contains the gene name
+        line = line.split(',')
+        human_symbol = line[0]
+        synonyms = line[1].split('|')
+        description = line[2].strip()
+        search_terms = synonyms
+        search_terms = search_terms.append(human_symbol)
+        print(search_terms)
+        search_terms = search_terms.append(description)
+        # for each line in gff_file_in, search for gene names
+        lines_with_search_terms = [gff_line for gff_line in gff_file_in if any(term in gff_line for term in search_terms)]
+        print(lines_with_search_terms)
+        # if search criteria matches gff_file_in line, write this line to gff_file_out
+    mito_carta_file.close()
+    gff_file_in.close()
+    gff_file_out.close()
