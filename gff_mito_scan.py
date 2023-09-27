@@ -41,7 +41,6 @@ if __name__ == "__main__":
 
 
     for gff_line in gff_file_in:
-        print(gff_line)
         for term in search_terms:
             if term in gff_line:
             #for mito_list in mito_file_out
