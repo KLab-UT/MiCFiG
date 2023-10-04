@@ -1,6 +1,15 @@
 Oct 4, 2023 meeting notes (w/ Erin, Dante, and Randy)
 1. Erin is going to modify search criteria to only include symbols and to add '|' before and '_HUMAN' after (i.e., get rid of description as search term)
 2. Dante is going to trim and map raw reads to the arizonae and marmoratus genomes
+-- Use trimmomatic to clean the reads: http://www.usadellab.org/cms/?page=trimmomatic
+-- This will give you exposure to a new tool, and I think it is a bit more straightforward than fastp
+-- I just uploaded annotated reference genomes for Aspidoscelis marmoratus and Aspidoscelis arizonae to the lonepeak cluster under /scratch/general/nfs1/utu_4310/whiptail_nmt_variation_data/references
+-- I also added the raw Illumina read data to /scratch/general/nfs1/utu_4310/whiptail_nmt_variation_data/raw_reads
+-- We need to map these reads to the annotated reference genomes
+-- I know this makes things more complex- but I would like to map all reads to both genomes
+-- In other words, let's make the following directories:
+-- /scratch/general/nfs1/utu_4310/whiptail_nmt_variation_data/reads_mapped_to_arizonae
+-- /scratch/general/nfs1/utu_4310/whiptail_nmt_variation_data/reads_mapped_to_marmoratus
 
 Sep 20, 2023 meeting notes (w/ Erin, Dante, and Randy)
 1. Erin will work on python script to search gff for Nmt genes
