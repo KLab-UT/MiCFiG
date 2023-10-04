@@ -43,9 +43,12 @@ if __name__ == "__main__":
     for gff_line in gff_file_in:
         for term in search_terms:
             if term in gff_line:
+                log = open("log.txt", 'a')
+                log.write("HIT:\n\tterm: " + term + "\n\tgff: " + gff_line)
+                log.close()
             #for mito_list in mito_file_out
             #lines_with_search_terms = [gff_line for gff_line in gff_file_in if any(term in gff_line for term in mito_list)]
-                print(gff_line, file=gff_file_out)
+                print(gff_line.strip(), file=gff_file_out)
         # if search criteria matches gff_file_in line, write this line to gff_file_out
     mito_carta_file.close()
     gff_file_in.close()

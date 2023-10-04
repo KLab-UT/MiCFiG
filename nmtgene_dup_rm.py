@@ -8,16 +8,18 @@ any duplicate lines
 '''
 
 def find_dup(nmt_genes, new_nmtgenes):
+    nmt_genes_nodups = set()
     with open(nmt_genes, 'r') as nmt_in:
-        lines = nmt_genes.readline()
-    clean_lines = set(line.strip() for line in lines if line.strip())
+        for line in nmt_in:
+            nmt_genes_nodups.add(line)
+    print(nmt_genes_nodups)
     with open(new_nmtgenes, 'w') as nmt_out:
-        file.write('\n'.join(clean_lines))
+        nmt_out.write(''.join(nmt_genes_nodups))
 
 
 if __name__ == '__main__':
-    nmt_genes = home/ebunch/whiptail_nmt_variation/test.txt
-    new_nmtgenes = home/ebunch/whiptail_nmt_variation/nmtgenes.txt
+    nmt_genes = sys.argv[1]
+    new_nmtgenes = sys.argv[2]
     find_dup(nmt_genes, new_nmtgenes)
 
 
