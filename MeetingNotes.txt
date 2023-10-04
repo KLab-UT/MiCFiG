@@ -1,3 +1,7 @@
+Oct 4, 2023 meeting notes (w/ Erin, Dante, and Randy)
+1. Erin is going to modify search criteria to only include symbols and to add '|' before and '_HUMAN' after (i.e., get rid of description as search term)
+2. Dante is going to trim and map raw reads to the arizonae and marmoratus genomes
+
 Sep 20, 2023 meeting notes (w/ Erin, Dante, and Randy)
 1. Erin will work on python script to search gff for Nmt genes
 - Try first without regular expressions
