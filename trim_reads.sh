@@ -16,6 +16,6 @@ while read sample; do
 	output_unpaired_1=$wd/trimmed_reads/unpaired_reads/${sample}_unpaired_1.fq.gz
 	output_paired_2=$wd/trimmed_reads/paired_reads/${sample}_paired_2.fq.gz
 	output_unpaired_2=$wd/trimmed_reads/unpaired_reads/${sample}_unpaired_2.fq.gz
-	trimmomatic PE -threads 8 -trimlog trimlog.txt -summary summary.txt -basein $read1 $read2 -baseout $output_paired_1 $output_unpaired_1 $output_paired_2 $output_unpaired_2
+	java -jar trimmomatic/0.39 PE -version trimmomatic-0.39 -threads 8 -trimlog trimlog.txt -summary summary.txt -basein $read1 $read2 -baseout $output_paired_1 $output_unpaired_1 $output_paired_2 $output_unpaired_2
 
 done<fq_list.txt
