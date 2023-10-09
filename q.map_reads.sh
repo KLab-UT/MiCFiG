@@ -11,8 +11,8 @@
 wd=/scratch/general/nfs1/utu_4310/whiptail_nmt_variation_data/
 mkdir -p $wd/mapped_reads/Aspidoscelis_arizonae_fasta
 mkdir -p $wd/mapped_reads/Aspidoscelis_marmoratus_fasta
-#mkdir -p $wd/mapped_reads/Aspidoscelis_arizonae_gff
-#mkdir -p $wd/mapped_reads/Aspidoscelis_marmoratus_gff
+mkdir -p $wd/mapped_reads/Aspidoscelis_arizonae_gff
+mkdir -p $wd/mapped_reads/Aspidoscelis_marmoratus_gff
 
 echo "Beggining mapping"
 MapReads() {

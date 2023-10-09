@@ -70,7 +70,7 @@ export -f fastqToBam
 
 echo "Aligning reads with reference with bwa mem."
 cd $i
-ls *.gz | cut -d "." -f "1,2" | parallel fastqToBam {} $g $o
+ls *fq.gz | cut -d "." -f "1,2" | parallel fastqToBam {} $g $o
 	
 module unload bwa/2020_03_19
 module unload samtools/1.16
