@@ -1,0 +1,4 @@
+Aspidoscelis_arizonae a_arizonae_AspAri2.0.fasta.gz
+Aspidoscelis_arizonae a_arizonae_AspAri2.0_v1.gff.gz
+#Aspidoscelis_marmoratus a_marmoratus_AspMarm2.0_v1.gff.gz
+#Aspidoscelis_marmoratus a_marmoratus_AspMarm2.0.fasta.gz

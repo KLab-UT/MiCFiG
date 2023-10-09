@@ -18,6 +18,8 @@ mkdir -p $wd/trimmed_reads/unpaired_reads
 module load trimmomatic
 #module load fastp/0.20.1
 
+echo "Beggining trimming."
+
 cd $wd/raw_reads
 ls *1.fq.gz | cut -d "_" -f 1,2,3,4 | sort | uniq > fq_list.txt
 while read sample; do
@@ -40,3 +42,5 @@ done<fq_list.txt
 
 module unload trimmomatic
 #module load fastp/0.20.1
+
+echo "Trimming complete."
