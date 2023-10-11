@@ -21,7 +21,7 @@ MapReads() {
 	# This is done for every genome you want to map (27 genomes listed in ref_genomes.txt).
 	bash map_reads.sh -i $wd/trimmed_reads/paired_reads -g $wd/references/${2} -o $wd/mapped_reads/${1} -t 12
 	echo "merched read mapped"
-	bash map_reads_paired.sh -i $wd/trimmed_reads/unpaired_reads -g $wd/references/${2} -o $wd/mapped_reads/${1} -t 12
+	bash map_reads_unpaired.sh -i $wd/trimmed_reads/unpaired_reads -g $wd/references/${2} -o $wd/mapped_reads/${1} -t 12
 	echo "unmerged read mapped"
 }
 export -f MapReads
