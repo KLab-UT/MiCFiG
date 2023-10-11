@@ -17,6 +17,7 @@ if __name__ == "__main__":
     mito_carta_file = open(sys.argv[1], 'r')
     gff_file_in = open(sys.argv[2], 'r')
     gff_file_out = open(sys.argv[3], 'w')
+    log = open("log.txt", 'w')
     # for each line in mito_carta_file, create search criteria
     mito_carta_file.readline()
     search_terms = []
@@ -44,15 +45,14 @@ if __name__ == "__main__":
 
 
     for gff_line in gff_file_in:
-        for term in search_terms:
+        for term in new_terms:
             if term in gff_line:
-                log = open("log.txt", 'a')
-                log.write("HIT:\n\tterm: " + term + "\n\tgff: " + gff_line)
-                log.close()
-            #for mito_list in mito_file_out
-            #lines_with_search_terms = [gff_line for gff_line in gff_file_in if any(term in gff_line for term in mito_list)]
-                print(gff_line.strip(), file=gff_file_out)
-        # if search criteria matches gff_file_in line, write this line to gff_file_out
+                # if search criteria matches gff_file_in line, write this line to gff_file_out
+                if gff_line.split("\t")[2] == "gene":
+                    print(term)
+                    log.write("HIT:\n\tterm: " + term + "\n\tgff: " + gff_line)
+                    print(gff_line.strip(), file=gff_file_out)
     mito_carta_file.close()
     gff_file_in.close()
     gff_file_out.close()
+    log.close()
