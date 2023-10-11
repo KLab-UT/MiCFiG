@@ -25,12 +25,15 @@ if __name__ == "__main__":
         # split the line up, and only select the element that contains the gene name
         line = line.split(',')
         human_symbol = line[0]
-        synonyms = line[1].split('|')
-        description = line[2].strip()
         search_terms.append(human_symbol)
+        synonyms = line[1].split('|')
         if synonyms[0] != '-':
             search_terms.extend(synonyms)
-        search_terms.append(description)
+        new_terms = ['|' + word + '_HUMAN' for word in search_terms]
+
+       # description = line[2].strip()
+       #search_terms.append(description)
+       #we no longer want to search for the description so I commented this out of the search terms list
         #^splits up all of the terms in the csv file and appends them to a list and then prints them
         #to a file, they are all separate lists and some contain nothing
 
