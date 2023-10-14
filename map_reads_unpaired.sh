@@ -61,7 +61,7 @@ bwa index ${g}
 echo "Beginning mapping"
 echo ""
 fastqToBam() {
-    [[ ! -f "${3}/${1}_unpaired.sam" ]] && bwa mem -t 2 "$2" ${1}*_unpaired_1.fq.gz ${1}*_unpaired_2.fq.gz > ${3}/${1}_unpaired.sam
+    [[ ! -f "${3}/${1}_unpaired.sam" ]] && bwa mem -t 2 "$2" ${1}_unpaired_1.fq.gz ${1}_unpaired_2.fq.gz > ${3}/${1}_unpaired.sam
     echo "${3}/${1}_unpaired.sam completed."
     samtools sort ${3}/${1}_unpaired.sam > ${3}/${1}_unpaired_sorted.bam -@ 2
     echo "${3}/${1}_unpaired_sorted.bam completed."
@@ -70,7 +70,7 @@ export -f fastqToBam
 
 echo "Aligning reads with reference with bwa mem."
 cd $i
-ls *fq.gz | cut -d "." -f "1,2" | parallel fastqToBam {} $g $o
+ls *fq.gz | cut -d "_" -f "1,2,3,4" | parallel fastqToBam {} $g $o
 	
 module unload bwa/2020_03_19
 module unload samtools/1.16

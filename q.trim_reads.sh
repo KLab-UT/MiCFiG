@@ -25,10 +25,10 @@ ls *1.fq.gz | cut -d "_" -f 1,2,3,4 | sort | uniq > fq_list.txt
 while read sample; do
 	read1=$wd/raw_reads/${sample}_1.fq.gz 
 	read2=$wd/raw_reads/${sample}_2.fq.gz
-	output_p_1=$wd/trimmed_reads/paired_reads/${sample}_paired_1.fq.gz
-	output_u_1=$wd/trimmed_reads/unpaired_reads/${sample}_unpaired_1.fq.gz
-	output_p_2=$wd/trimmed_reads/paired_reads/${sample}_paired_2.fq.gz
-	output_u_2=$wd/trimmed_reads/unpaired_reads/${sample}_unpaired_2.fq.gz
+	output_p_1=$wd/trimmed_reads/paired_reads/${sample}.paired1.fq.gz
+	output_u_1=$wd/trimmed_reads/unpaired_reads/${sample}.unpaired1.fq.gz
+	output_p_2=$wd/trimmed_reads/paired_reads/${sample}.paired2.fq.gz
+	output_u_2=$wd/trimmed_reads/unpaired_reads/${sample}.unpaired2.fq.gz
 	trimmomatic PE $read1 $read2 $output_p_1 $output_u_1 $output_p_2 $output_u_2 SLIDINGWINDOW:5:20 
 	#MINLEN:50
 	#trimmomatic PE -threads 16 -trimlog trimlog.txt -summary summary.txt -basein $read1 $read2 -baseout $output_paired_1 $output_unpaired_1 $output_paired_2 $output_unpaired_2
