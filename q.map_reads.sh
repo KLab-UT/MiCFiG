@@ -11,10 +11,11 @@
 wd=/scratch/general/nfs1/utu_4310/whiptail_nmt_variation_data
 mkdir -p $wd/mapped_reads/Aspidoscelis_arizonae
 mkdir -p $wd/mapped_reads/Aspidoscelis_marmoratus
+#mkdir -m 777 -p $wd/mapped_reads/Aspidoscelis_marmoratus
 
 echo "Beggining mapping"
 MapReads() {
-	wd=/scratch/general/nfs1/utu_4310/whiptail_nmt_variation_data/
+	wd=/scratch/general/nfs1/utu_4310/whiptail_nmt_variation_data
 	echo "############################"
 	echo -e "Species: ${1}\nGenome: ${2}"
 	# you're passing in n threads where n is number of reads (6) multiplied by number of threads used by functions in map_reads.sh (2).

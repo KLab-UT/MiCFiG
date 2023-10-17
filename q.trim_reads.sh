@@ -21,7 +21,7 @@ module load trimmomatic
 echo "Beggining trimming."
 
 cd $wd/raw_reads
-ls *1.fq.gz | cut -d "_" -f 1,2,3,4 | sort | uniq > fq_list.txt
+ls *.fq.gz | cut -d "_" -f 1,2,3,4 | sort | uniq > fq_list.txt
 while read sample; do
 	read1=$wd/raw_reads/${sample}_1.fq.gz 
 	read2=$wd/raw_reads/${sample}_2.fq.gz
