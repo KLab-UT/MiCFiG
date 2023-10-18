@@ -1,3 +1,8 @@
+October 18, 2023 meeting notes (w/ Erin, Dante, and Randy)
+1. Erin is going to finish up her script to pull out the mitochondrial coordinates and create a new GFF file
+2. Dante is going to add read groups, mark PCR duplicates, and index his bam reads in preparation for SNP calling
+3. Erin and Dante are going to review the manuscripts "Liu et al (2022) and Barbitoff et al (2022)", each of which compare SNP calling software tools
+
 Oct 4, 2023 meeting notes (w/ Erin, Dante, and Randy)
 1. Erin is going to modify search criteria to only include symbols and to add '|' before and '_HUMAN' after (i.e., get rid of description as search term)
 2. Dante is going to trim and map raw reads to the arizonae and marmoratus genomes
