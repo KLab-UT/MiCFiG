@@ -9,8 +9,8 @@
 
 # create working environment
 wd=/scratch/general/nfs1/utu_4310/whiptail_nmt_variation_data
-mkdir -p $wd/mapped_reads/Aspidoscelis_arizonae
-mkdir -p $wd/mapped_reads/Aspidoscelis_marmoratus
+mkdir -p $wd/mapped_reads/not_merged_Aspidoscelis_arizonae/
+mkdir -p $wd/mapped_reads/not_merged_Aspidoscelis_marmoratus/
 #mkdir -m 777 -p $wd/mapped_reads/Aspidoscelis_marmoratus
 
 echo "Beggining mapping"
@@ -22,7 +22,7 @@ MapReads() {
 	# This is done for every genome you want to map (27 genomes listed in ref_genomes.txt).
 	bash map_reads.sh -i $wd/trimmed_reads/paired_reads -g $wd/references/${2} -o $wd/mapped_reads/${1} -t 12
 	echo "paired read mapped"
-	bash map_reads_unpaired.sh -i $wd/trimmed_reads/unpaired_reads -g $wd/references/${2} -o $wd/mapped_reads/${1} -t 12
+	bash map_reads.sh -i $wd/trimmed_reads/unpaired_reads -g $wd/references/${2} -o $wd/mapped_reads/${1} -t 12
 	echo "unpaired read mapped"
 }
 export -f MapReads
