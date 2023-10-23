@@ -61,10 +61,13 @@ bwa index ${g}
 echo "Beginning mapping"
 echo ""
 fastqToBam() {
-    [[ ! -f "${3}/${1}.sam" ]] && bwa mem -t 2 "$2" ${1}.fq.gz > ${3}/${1}.sam
-    echo "${3}/${1}.sam completed."
-    samtools sort ${3}/${1}.sam > ${3}/${1}.bam -@ 2
-    echo "${3}/${1}.bam completed."
+    file_name=$1
+    genome=$2
+    output=$3
+    [[ ! -f "${output}/${file_name}.sam" ]] && bwa mem -t 2 "${genome}" ${file_name}.fq.gz > ${output}/${file_name}.sam
+    echo "${output}/${file_name}.sam completed."
+    samtools sort ${output}/${file_name}.sam > ${output}/${file_name}.bam -@ 2
+    echo "${output}/${file_name}.bam completed."
 }
 export -f fastqToBam
 
@@ -72,6 +75,7 @@ echo "Aligning reads with reference with bwa mem."
 cd $i
 #ls *fq.gz | cut -d "_" -f "1,2,3,4" | parallel fastqToBam {} $g $o
 ls *fq.gz | cut -d "." -f "1" | parallel fastqToBam {} $g $o
+# example of what trimmed files look like KLC098_USD16091388L_HKFJFDSXX_L4_unpaired_1.fq.gz
 
 module unload bwa/2020_03_19
 module unload samtools/1.16
