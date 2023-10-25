@@ -1,3 +1,8 @@
+Oct 25, 2023 meeting notes with Dante
+-- Last week (on 10/18) Randy sent Dante and Erin a couple of papers on SNP calling tools. All three will read them before next week's meeting (check email to find papers)
+-- Dante will look at https://github.com/rklabacka/ThamnophisElegans_FunctionalGenomics2021/blob/main/Examining-Sequence-Variation/reads2vcf/reads2vcf.sh to understand steps after mapping
+---- These include adding readgroups and marking duplicates
+
 October 18, 2023 meeting notes (w/ Erin, Dante, and Randy)
 1. Erin is going to finish up her script to pull out the mitochondrial coordinates and create a new GFF file
 2. Dante is going to add read groups, mark PCR duplicates, and index his bam reads in preparation for SNP calling
