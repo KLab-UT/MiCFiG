@@ -1,3 +1,6 @@
+Oct 31, 2023 meeting notes with Erin
+-- Erin is going to read the paper on SNP calling tools
+
 Oct 25, 2023 meeting notes with Dante
 -- Last week (on 10/18) Randy sent Dante and Erin a couple of papers on SNP calling tools. All three will read them before next week's meeting (check email to find papers)
 -- Dante will look at https://github.com/rklabacka/ThamnophisElegans_FunctionalGenomics2021/blob/main/Examining-Sequence-Variation/reads2vcf/reads2vcf.sh to understand steps after mapping
