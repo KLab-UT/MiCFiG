@@ -60,6 +60,9 @@ bam_files=$(ls *.bam | tr '\n' ' ')
 # Create a space-separated string of bam files
 BAM_FILES=$(echo $bam_files | tr ' ' '\n' | paste -s -d ' ')
 
+bcftools mpileup -Ob -o <study.bcf> -f <ref.fa> <sample1.bam> 
+bcftools call -vmO z -o <study.vcf.gz> <study.bcf>
+
 # Run mpileup on all bam files and pipe the output to BCFtools
 samtools mpileup -g -B $BAM_FILES | bcftools view -Ou - > all_samples.bcf
 
