@@ -1,18 +1,20 @@
 #! /bin/bash
 
 {
-usage="$(basename "$0") [-h] [-i directory for input files] [-g mapped reads directory]
-This program will map reads onto the reference directory
+usage="$(basename "$0") [-h] [-i directory for input bam files] [-g reference genome] [-o ouput file directory]
+This program will get Variants and make a VCF file
         -h show help text
-        -i directory name where input files are located
-        -g mapped reads directory"
+        -i directory name where input bam files are located
+        -g reference genome
+		-o output file directory"
 
-options=':h:i:g:'
+options=':h:i:g:o:'
 while getopts $options option; do
         case "$option" in
                 h) echo "$usage"; exit;;
                 i) i=$OPTARG;;
                 g) g=$OPTARG;;
+				o) o=$OPTARG;;
                 :) printf "missing argument for -%s\n" "$OPTARG" >&2; echo "$usage" >&2; exit 1;;
                 \?) printf "illegal option: -%s\n" "$OPTARG" >&2; echo "$usage" >&2; exit 1;;
         esac
@@ -54,17 +56,27 @@ module load SAMtools/1.3.1
 #samtools mpileup -uf reference.fasta output.bam | bcftools view -bvcg - > variants.bcf
 #bcftools view variants.bcf | vcfutils.pl varFilter > filtered_variants.vcf
 
-# List all BAM files in current directory
-bam_files=$(ls *.bam | tr '\n' ' ')
+get_variants() {
+	name=$1
+	reference=$2
+	output=$3
+# -Ob = output type is combressed or binary
+# -o is output
+# -f fasta reference file
+	# bcftools mpileup -Ob -o <study.bcf> -f <ref.fa> <sample1.bam>
+	bcftools mpileup -Ob -o ${output}/${name}.bcf> -f ${reference} ${name}.bam
+# -v = vatriants only
+# -m = mark sites
+# -O z = compressed VCF
+	# bcftools call -vmO z -o <study.vcf.gz> <study.bcf>
+	bcftools call -vmO z -o ${name}.vcf.gz ${name}.bcf
+}
+export -f get_variants
 
-# Create a space-separated string of bam files
-BAM_FILES=$(echo $bam_files | tr ' ' '\n' | paste -s -d ' ')
-
-bcftools mpileup -Ob -o <study.bcf> -f <ref.fa> <sample1.bam> 
-bcftools call -vmO z -o <study.vcf.gz> <study.bcf>
-
-# Run mpileup on all bam files and pipe the output to BCFtools
-samtools mpileup -g -B $BAM_FILES | bcftools view -Ou - > all_samples.bcf
+echo "Getting Variants."
+cd $i
+ls *.bam | cut -d "." -f "1" | parallel fastqToBam {} $g $o
+# bam file example KLC098_USD16091388L_HKFJFDSXX_L4_paired_1.bam
 
 module unload BCFtools/1.3.1
 module unload SAMtools/1.3.1
