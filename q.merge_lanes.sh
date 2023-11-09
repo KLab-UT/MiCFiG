@@ -1,6 +1,6 @@
 #!/bin/sh
 #SBATCH --account=utu
-#SBATCH --partition=kingspeak
+#SBATCH --partition=lonepeak
 #SBATCH --time=72:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=12
@@ -17,4 +17,5 @@ cd $wd
 # */ is a wildcard pattern that matches all directories in the current directory
 for reference in */; do
 	bash $home/merge_lanes.sh -i $wd/$reference -g ${reference///} -o $wd/$reference
+    bash $home/merge_unmerged_and_merged.sh -i $wd/$reference -g ${reference///} -o $wd/$reference
 done
