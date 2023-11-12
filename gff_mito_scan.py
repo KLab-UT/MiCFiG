@@ -11,7 +11,28 @@ sys.argv[3] should be the name of the gff file being written out
 
 import sys
 
-# Functions here
+def Create_Search_Terms(terms_file):
+    terms_file.readline()
+    search_terms = []
+    for line in terms_file:
+        line = line.split(',')
+        human_symbol = line[0]
+        search_terms.append(human_symol)
+        synonyms = line[1].split('|')
+        if synonyms[0] != '-':
+            search_terms.extend(synonyms)
+        new_terms = ['|' + word + '_HUMAN' for word in search_terms]
+    return new_terms
+
+def Find_Matches(search_terms, gff_file_in, gff_file_out):
+    for line in gff_file_in:
+        for term in search_terms:
+            if term in line:
+                if line.split('\t')[2] == 'gene':
+                    print(term)
+                    log.write('HIT:\n\tterm: ' + term + '\n\tgff: ' + line)
+                    print(line.strip(), file = gff_file_out
+    return gff_file_out
 
 if __name__ == "__main__":
     mito_carta_file = open(sys.argv[1], 'r')
