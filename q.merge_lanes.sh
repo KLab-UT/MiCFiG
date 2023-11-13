@@ -9,7 +9,7 @@
 
 
 # create working environment
-wd=/scratch/general/nfs1/utu_4310/whiptail_shared_data/mapped_reads
+wd=/scratch/general/nfs1/utu_4310/whptail_nmt_variation_data/mapped_reads
 home=~/Biol_4310/whiptail_nmt_variation
 # run bash script for counting unmerged reads
 cd $wd

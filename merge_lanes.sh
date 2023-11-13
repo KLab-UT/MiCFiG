@@ -46,26 +46,26 @@ cd $i
 [[ ! -f "KLC098_${g}_L4_paired.bam" ]] && samtools merge KLC098_${g}_L4_paired.bam KLC098_*_L4_paired_1.bam KLC098_*_L4_paired_2.bam
 [[ ! -f "KLC098_${g}_L1_paired.bam" ]] && samtools merge KLC098_${g}_L1_paired.bam KLC098_*_L1_paired_1.bam KLC098_*_L1_paired_2.bam
 
-[[ ! -f "KLC098_${g}_L4_unpaired.bam" ]] && samtools merge KLC098_${g}_L4_unpaired.bam KLC098_*_L4_unpaired.bam KLC098_*_L4_unpaired.bam
-[[ ! -f "KLC098_${g}_L1_unpaired.bam" ]] && samtools merge KLC098_${g}_L1_unpaired.bam KLC098_*_L1_unpaired.bam KLC098_*_L1_unpaired.bam
+[[ ! -f "KLC098_${g}_L4_unpaired.bam" ]] && samtools merge KLC098_${g}_L4_unpaired.bam KLC098_*_L4_unpaired_1.bam KLC098_*_L4_unpaired_2.bam
+[[ ! -f "KLC098_${g}_L1_unpaired.bam" ]] && samtools merge KLC098_${g}_L1_unpaired.bam KLC098_*_L1_unpaired_1.bam KLC098_*_L1_unpaired_2.bam
 
 # RLK019
 [[ ! -f "RLK019_${g}_L3_paired.bam" ]] && samtools merge RLK019_${g}_L3_paired.bam RLK019_*_L3_paired_1.bam RLK019_*_L1_paired_2.bam
 [[ ! -f "RLK019_${g}_L1_paired.bam" ]] && samtools merge RLK019_${g}_L1_paired.bam RLK019_*_L1_paired_1.bam RLK019_*_L1_paired_2.bam
 
 
-[[ ! -f "RLK019_${g}_L3_unpaired.bam" ]] && samtools merge RLK019_${g}_L3_unpaired.bam RLK019_*_L3_unpaired.bam RLK019_*_L1_unpaired.bam
-[[ ! -f "RLK019_${g}_L1_unpaired.bam" ]] && samtools merge RLK019_${g}_L1_unpaired.bam RLK019_*_L1_unpaired.bam RLK019_*_L1_unpaired.bam
+[[ ! -f "RLK019_${g}_L3_unpaired.bam" ]] && samtools merge RLK019_${g}_L3_unpaired.bam RLK019_*_L3_unpaired_1.bam RLK019_*_L1_unpaired_2.bam
+[[ ! -f "RLK019_${g}_L1_unpaired.bam" ]] && samtools merge RLK019_${g}_L1_unpaired.bam RLK019_*_L1_unpaired_1.bam RLK019_*_L1_unpaired_2.bam
 
 # RLC0004
 [[ ! -f "RLK004_${g}_paired.bam" ]] && samtools merge RLK004_${g}_paired.bam RLK004_*_paired_1.bam RLK004_*_paired_2.bam
 
-[[ ! -f "RLK004_${g}_unpaired.bam" ]] && samtools merge RLK004_${g}_unpaired.bam RLK004_*_unpaired.bam RLK004_*_unpaired.bam
+[[ ! -f "RLK004_${g}_unpaired.bam" ]] && samtools merge RLK004_${g}_unpaired.bam RLK004_*_unpaired_1.bam RLK004_*_unpaired_2.bam
 
 # RLK034
 [[ ! -f "RLK034_${g}_paired.bam" ]] && samtools merge RLK034_${g}_paired.bam RLK034_*_paired_1.bam RLK034_*_paired_2.bam
 
-[[ ! -f "RLK034_${g}_unpaired.bam" ]] && samtools merge RLK034_${g}_unpaired.bam RLK034_*_unpaired.bam RLK034_*_unpaired.bam
+[[ ! -f "RLK034_${g}_unpaired.bam" ]] && samtools merge RLK034_${g}_unpaired.bam RLK034_*_unpaired_1.bam RLK034_*_unpaired_2.bam
 
 # merge/combine lanes for KLC098 and RLK019
 [[ ! -f "KLC098_${g}_paired.bam" ]] && samtools merge KLC098_${g}_paired.bam KLC098_${g}_L4_paired.bam KLC098_${g}_L1_paired.bam
