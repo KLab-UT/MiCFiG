@@ -65,15 +65,34 @@ def Create_Search_Terms(mito):
         #formats all of the terms correctly for better search acuracy
     return terms_list
 
-def Find_Matches(terms_list, gff, out, log):
+def Find_Matches(terms_list, gff, out):
     '''
     This function takes an input of the terms_list (from Create_Search_Terms),
     the .gff file with the genes to be sorted through, the output file to write
-    the sorted genes to, and the log file to write the log of the matched term with
-    the gene to.
+    the sorted genes to.
 
-    It outputs the output file with the sorted genes and the log file detailing
-    the matches corresponding to the gene found.
+    It outputs the output file with the sorted genes.
+
+    '''
+    for line in gff:
+        for term in terms_list:
+            if term in line:
+                #checks if the term in terms_list is in the gff file line
+                if line.split('\t')[2] == 'gene':
+                    #if the term is there the line must be a gene not an exon or transcript
+                    #this avoids duplicaions
+                    print(line.strip(), file = out)
+                    #writes to the output gff file
+    return
+
+def Create_Log_File(terms_list, gff, log):
+    '''
+    This function takes an input of the terms_list (from Create_Search_Terms),
+    the .gff file with the genes to be sorted through, the log file to print
+    the matched genes to.
+
+    It outputs the log file where the key word that was matched to the gene
+    precedes the gene that was matched.
 
     '''
     for line in gff:
@@ -85,50 +104,13 @@ def Find_Matches(terms_list, gff, out, log):
                     #this avoids duplicaions
                     log.write('HIT:\n\tterm: ' + term + '\n\tgff: ' + line)
                     #writes to the log file
-                    print(line.strip(), file = out)
-                    #writes to the output gff file
+    return
+
+def main():
+    terms = Create_Search_Terms(mito)
+    Find_Matches(terms, gff, out)
+    Create_Log_File(terms, gff, log)
     return
 
 if __name__ == "__main__":
-    mito_carta_file = open(sys.argv[1], 'r')
-    gff_file_in = open(sys.argv[2], 'r')
-    gff_file_out = open(sys.argv[3], 'w')
-    log = open("log.txt", 'w')
-    # for each line in mito_carta_file, create search criteria
-    mito_carta_file.readline()
-    search_terms = []
-    for line in mito_carta_file:
-        #print(line)
-        # split the line up, and only select the element that contains the gene name
-        line = line.split(',')
-        human_symbol = line[0]
-        search_terms.append(human_symbol)
-        synonyms = line[1].split('|')
-        if synonyms[0] != '-':
-            search_terms.extend(synonyms)
-        new_terms = ['|' + word + '_HUMAN' for word in search_terms]
-
-       # description = line[2].strip()
-       #search_terms.append(description)
-       #we no longer want to search for the description so I commented this out of the search terms list
-        #^splits up all of the terms in the csv file and appends them to a list and then prints them
-        #to a file, they are all separate lists and some contain nothing
-
-        #.extend allows you to add the terms from one list to another without
-        #adding the whole list
-
-        # for each line in gff_file_in, search for gene names
-
-
-    for gff_line in gff_file_in:
-        for term in new_terms:
-            if term in gff_line:
-                # if search criteria matches gff_file_in line, write this line to gff_file_out
-                if gff_line.split("\t")[2] == "gene":
-                    print(term)
-                    log.write("HIT:\n\tterm: " + term + "\n\tgff: " + gff_line)
-                    print(gff_line.strip(), file=gff_file_out)
-    mito_carta_file.close()
-    gff_file_in.close()
-    gff_file_out.close()
-    log.close()
+    main()
