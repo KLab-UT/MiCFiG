@@ -7,7 +7,7 @@ Argparse allows the user to provide arguments from the command line with tags.
 
 Parser is an argument object that contains the arguments that are required of the user.
 
-To run the code the user should input the name of the python script with the
+To run the code, the user should input the name of the python script with the
 following inputs:
 
 The input with the tag -m should be the name of the Human_MitoCarta3.0.csv file
@@ -18,7 +18,7 @@ If the user should want a specific name for the output gff file, the input with
 the tag -o should be the name of the gff file being written out. There is a
 default value for this of output.gff.
 
-If the user should want a specific name for the output log file, the input with
+If the user wants a specific name for the output log file, the input with
 the tag -l should be the name of the log file being written out. There is a
 default value for this of log.txt
 
@@ -35,7 +35,7 @@ parser.add_argument("--log_file", "-l", default="log.txt", help="Log to keep tra
 
 args = parser.parse_args()
 
-#the names that the arguments will be refered to as throughout the script
+#the names that the arguments will be referred to as throughout the script
 mito = args.mito_carta_file
 gff = args.gff_file_in
 out = args.gff_file_out
@@ -43,7 +43,7 @@ log = args.log_file
 
 def Create_Search_Terms(mito):
     '''
-    This function takes an input of a file with a list of mitochondrial encoded
+    This function takes an input of a file with a list of mitochondrial-encoded
     genes (CSV file).
 
     It outputs a list of all of the search terms in the format "|term_HUMAN" without
@@ -63,7 +63,7 @@ def Create_Search_Terms(mito):
             #ignores the blank inputs
             search_terms.extend(synonyms)
         terms_list = ['|' + word + '_HUMAN' for word in search_terms]
-        #formats all of the terms correctly for better search acuracy
+        #formats all of the terms correctly for better search accuracy
     return terms_list
 
 def Find_Matches(terms_list, gff, out):
@@ -81,7 +81,7 @@ def Find_Matches(terms_list, gff, out):
                 #checks if the term in terms_list is in the gff file line
                 if line.split('\t')[2] == 'gene':
                     #if the term is there the line must be a gene not an exon or transcript
-                    #this avoids duplicaions
+                    #this avoids duplications
                     print(line.strip(), file = out)
                     #writes to the output gff file
     return
@@ -92,7 +92,7 @@ def Create_Log_File(terms_list, gff, log):
     the .gff file with the genes to be sorted through, the log file to print
     the matched genes to.
 
-    It outputs the log file where the key word that was matched to the gene
+    It outputs the log file where the keyword that was matched to the gene
     precedes the gene that was matched.
 
     '''
@@ -102,14 +102,14 @@ def Create_Log_File(terms_list, gff, log):
                 #checks if the term in terms_list is in the gff file line
                 if line.split('\t')[2] == 'gene':
                     #if the term is there the line must be a gene not an exon or transcript
-                    #this avoids duplicaions
+                    #this avoids duplications
                     print('HIT:\n\tterm:' + term + '\n\tgff:' + line, file = log)
                     #writes to the log file
     return
 
 def main():
     '''
-    This function takes no inputs, but compiles all of the functions and runs
+    This function takes no inputs but compiles all of the functions and runs
     them to first create the list of terms to search through the gff file and
     then create the output gff file and the log file.
 
