@@ -1,12 +1,27 @@
 #!/usr/bin/env python
 '''
-This script is to search a gff file (a genome annotation file) for nuclear-encoded, mitochondrial-targeting gens (Nmt genes)
-sys allows the user to provide arguments from the command line
-sys.argv is a list of the arguments.
-sys.argv[0] is the name of the python script.
-sys.argv[1] should be the name of the Human_MitoCarta3.0.csv file
-sys.argv[2] should be the name of the gff file being read in
-sys.argv[3] should be the name of the gff file being written out
+This script is to search a gff file (a genome annotation file) for nuclear-encoded,
+mitochondrial-targeting gens (Nmt genes)
+
+Argparse allows the user to provide arguments from the command line with tags.
+
+Parser is an argument object that contains the arguments that are required of the user.
+
+To run the code the user should input the name of the python script with the
+following inputs:
+
+The input with the tag -m should be the name of the Human_MitoCarta3.0.csv file
+
+The input with the tag -g should be the name of the gff file being read in
+
+If the user should want a specific name for the output gff file, the input with
+the tag -o should be the name of the gff file being written out. There is a
+default value for this of output.gff.
+
+If the user should want a specific name for the output log file, the input with
+the tag -l should be the name of the log file being written out. There is a
+default value for this of log.txt
+
 '''
 
 import argparse
