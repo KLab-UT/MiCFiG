@@ -9,22 +9,46 @@ sys.argv[2] should be the name of the gff file being read in
 sys.argv[3] should be the name of the gff file being written out
 '''
 
-import sys
+import argparse
 
-def Create_Search_Terms(terms_file):
+parser = argparse.ArgumentParser()
+parser.add_argument("--mito_carta_file", '-m', help="Mitochondrial DNA CSV file")
+parser.add_argument("--gff_file_in", "-g", help="Input gff file")
+parser.add_argument("--gff_file_out", "-o", default="output.gff", help="Output gff file")
+parser.add_argument("--log_file", "-l", default="log.txt", help="Log to keep track of the matches in the genes")
+
+args = parser.parse_args()
+
+mito = args.mito_carta_file
+gff = args.gff_file_in
+out = args.gff_file_out
+log = args.log_file
+
+def Create_Search_Terms(mito):
+    '''
+    This function takes an input of a file with a list of mitochondrial encoded
+    genes (CSV file).
+    It outputs a list of all of the search terms in the format "|term_HUMAN" without
+    the phrase description of the gene and blank inputs.
+
+    '''
     terms_file.readline()
     search_terms = []
-    for line in terms_file:
+    for line in mito:
         line = line.split(',')
+        #divides up each column
         human_symbol = line[0]
         search_terms.append(human_symol)
         synonyms = line[1].split('|')
+        #divides multiple inputs in column 2
         if synonyms[0] != '-':
+            #ignores the blank inputs
             search_terms.extend(synonyms)
-        new_terms = ['|' + word + '_HUMAN' for word in search_terms]
-    return new_terms
+        terms_list = ['|' + word + '_HUMAN' for word in search_terms]
+        #formats all of the terms correctly for better search acuracy
+    return terms_list
 
-def Find_Matches(search_terms, gff_file_in, gff_file_out):
+def Find_Matches(terms_list, gff, out, log):
     for line in gff_file_in:
         for term in search_terms:
             if term in line:
