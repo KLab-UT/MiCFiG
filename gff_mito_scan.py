@@ -107,6 +107,12 @@ def Create_Log_File(terms_list, gff, log):
     return
 
 def main():
+    '''
+    This function takes no inputs, but compiles all of the functions and runs
+    them to first create the list of terms to search through the gff file and
+    then create the output gff file and the log file.
+
+    '''
     terms = Create_Search_Terms(mito)
     Find_Matches(terms, gff, out)
     Create_Log_File(terms, gff, log)
@@ -114,3 +120,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
