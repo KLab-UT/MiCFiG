@@ -27,6 +27,7 @@ default value for this of log.txt
 import argparse
 
 parser = argparse.ArgumentParser()
+#creates the arguments to be passed through the functions
 parser.add_argument("--mito_carta_file", '-m', help="Mitochondrial DNA CSV file")
 parser.add_argument("--gff_file_in", "-g", help="Input gff file")
 parser.add_argument("--gff_file_out", "-o", default="output.gff", help="Output gff file")
@@ -34,6 +35,7 @@ parser.add_argument("--log_file", "-l", default="log.txt", help="Log to keep tra
 
 args = parser.parse_args()
 
+#the names that the arguments will be refered to as throughout the script
 mito = args.mito_carta_file
 gff = args.gff_file_in
 out = args.gff_file_out
@@ -64,14 +66,28 @@ def Create_Search_Terms(mito):
     return terms_list
 
 def Find_Matches(terms_list, gff, out, log):
-    for line in gff_file_in:
-        for term in search_terms:
+    '''
+    This function takes an input of the terms_list (from Create_Search_Terms),
+    the .gff file with the genes to be sorted through, the output file to write
+    the sorted genes to, and the log file to write the log of the matched term with
+    the gene to.
+
+    It outputs the output file with the sorted genes and the log file detailing
+    the matches corresponding to the gene found.
+
+    '''
+    for line in gff:
+        for term in terms_list:
             if term in line:
+                #checks if the term in terms_list is in the gff file line
                 if line.split('\t')[2] == 'gene':
-                    print(term)
+                    #if the term is there the line must be a gene not an exon or transcript
+                    #this avoids duplicaions
                     log.write('HIT:\n\tterm: ' + term + '\n\tgff: ' + line)
-                    print(line.strip(), file = gff_file_out
-    return gff_file_out
+                    #writes to the log file
+                    print(line.strip(), file = out)
+                    #writes to the output gff file
+    return
 
 if __name__ == "__main__":
     mito_carta_file = open(sys.argv[1], 'r')
