@@ -45,17 +45,18 @@ def Create_Search_Terms(mito):
     '''
     This function takes an input of a file with a list of mitochondrial encoded
     genes (CSV file).
+
     It outputs a list of all of the search terms in the format "|term_HUMAN" without
     the phrase description of the gene and blank inputs.
 
     '''
-    terms_file.readline()
+    mito.readline()
     search_terms = []
     for line in mito:
         line = line.split(',')
         #divides up each column
         human_symbol = line[0]
-        search_terms.append(human_symol)
+        search_terms.append(human_symbol)
         synonyms = line[1].split('|')
         #divides multiple inputs in column 2
         if synonyms[0] != '-':
@@ -102,7 +103,7 @@ def Create_Log_File(terms_list, gff, log):
                 if line.split('\t')[2] == 'gene':
                     #if the term is there the line must be a gene not an exon or transcript
                     #this avoids duplicaions
-                    log.write('HIT:\n\tterm: ' + term + '\n\tgff: ' + line)
+                    print('HIT:\n\tterm:' + term + '\n\tgff:' + line, file = log)
                     #writes to the log file
     return
 
@@ -113,9 +114,13 @@ def main():
     then create the output gff file and the log file.
 
     '''
-    terms = Create_Search_Terms(mito)
-    Find_Matches(terms, gff, out)
-    Create_Log_File(terms, gff, log)
+    with open(mito, "r") as mito_terms:
+        with open(gff, "r") as gff_in:
+            with open(out, "w") as gff_out:
+                with open(log, "w") as log_out:
+                    terms = Create_Search_Terms(mito_terms)
+                    Find_Matches(terms, gff_in, gff_out)
+                    Create_Log_File(terms, gff_in, log_out)
     return
 
 if __name__ == "__main__":
