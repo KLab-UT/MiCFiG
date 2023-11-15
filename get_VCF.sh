@@ -77,6 +77,7 @@ echo "Getting Variants."
 cd $i
 ls *.bam | cut -d "." -f "1" | parallel fastqToBam {} $g $o
 # bam file example KLC098_USD16091388L_HKFJFDSXX_L4_paired_1.bam
+# bam file example KLC098_USD16091388L_HKFJFDSXX.bam
 
 module unload BCFtools/1.3.1
 module unload SAMtools/1.3.1
