@@ -28,7 +28,7 @@ echo ""
 
 # mandatory arguments
 if [ ! "$i" ] || [ ! "$g" ] || [ ! "$o" ]; then
-  echo "arguments -o, and -i  must be provided"
+  echo "arguments -o, -g, and -i  must be provided"
   echo "$usage" >&2; exit 1
 fi
 
