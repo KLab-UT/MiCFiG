@@ -60,6 +60,7 @@ get_variants() {
 	name=$1
 	reference=$2
 	output=$3
+    echo "Name: ${name}\nReference: ${reference}\nOutput: ${output}"
 # -Ob = output type is combressed or binary
 # -o is output
 # -f fasta reference file
