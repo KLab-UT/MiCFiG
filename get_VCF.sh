@@ -64,7 +64,7 @@ get_variants() {
 # -o is output
 # -f fasta reference file
 	# bcftools mpileup -Ob -o <study.bcf> -f <ref.fa> <sample1.bam>
-	bcftools mpileup -Ob -o ${output}/${name}.bcf> -f ${reference} ${name}.bam
+	bcftool mpileup -Ob -o ${output}/${name}.bcf> -f ${reference} ${name}.bam
 # -v = vatriants only
 # -m = mark sites
 # -O z = compressed VCF
@@ -75,7 +75,7 @@ export -f get_variants
 
 echo "Getting Variants."
 cd $i
-ls *.bam | cut -d "." -f "1" | parallel fastqToBam {} $g $o
+ls *_combined.bam | cut -d "." -f "1" | parallel fastqToBam {} $g $o
 # bam file example KLC098_USD16091388L_HKFJFDSXX_L4_paired_1.bam
 # bam file example KLC098_USD16091388L_HKFJFDSXX.bam
 

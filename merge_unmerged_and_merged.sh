@@ -39,13 +39,13 @@ cd $i
 #merge (merged.bam) files and (unmerged.bam) files
 # KLC098, RLK019, RLK004, RLK034
 # "[ -f <file_name> ] && do thing" checks if file exists before doing tasks
-[[ ! -f "KLC098_${g}_combined.bam" ]] && samtools merge KLC098_${g}.bam KLC098_*_paired.bam KLC098_*_unpaired.bam
+[[ ! -f "KLC098_${g}_combined.bam" ]] && samtools merge KLC098_${g}_combined.bam KLC098_*_paired.bam KLC098_*_unpaired.bam
 
-[[ ! -f "RLK019_${g}_combined.bam" ]] && samtools merge RLK019_${g}.bam RLK019_*_paired.bam RLK019_*_unpaired.bam
+[[ ! -f "RLK019_${g}_combined.bam" ]] && samtools merge RLK019_${g}_combined.bam RLK019_*_paired.bam RLK019_*_unpaired.bam
 
-[[ ! -f "RLK004_${g}_combined.bam" ]] && samtools merge RLK004_${g}.bam RLK004_*_paired.bam RLK004_*_unpaired.bam
+[[ ! -f "RLK004_${g}_combined.bam" ]] && samtools merge RLK004_${g}_combined.bam RLK004_*_paired.bam RLK004_*_unpaired.bam
 
-[[ ! -f "RLK034_${g}_combined.bam" ]] && samtools merge RLK034_${g}.bam KLC098_*_paired.bam RLK034_*_unpaired.bam
+[[ ! -f "RLK034_${g}_combined.bam" ]] && samtools merge RLK034_${g}_combined.bam KLC098_*_paired.bam RLK034_*_unpaired.bam
 
 #files look like this...
 #RLK004_am_unmerged.bam
