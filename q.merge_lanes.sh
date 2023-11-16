@@ -18,5 +18,5 @@ cd $wd
 for reference in */; do
     echo $reference
 	bash $home/merge_lanes.sh -i $wd/$reference -g ${reference///} -o $wd/$reference
-    bash $home/merge_unmerged_and_merged.sh -i $wd/$reference -g ${reference///} -o $wd/$reference
+    bash $home/merge_paired_and_unpaired.sh -i $wd/$reference -g ${reference///} -o $wd/$reference
 done
