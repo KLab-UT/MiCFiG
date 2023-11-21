@@ -82,3 +82,4 @@ ls *_combined.bam | cut -d "." -f "1" | parallel fastqToBam {} $g $o
 
 module unload BCFtools/1.3.1
 module unload SAMtools/1.3.1
+}
