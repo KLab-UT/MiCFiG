@@ -47,8 +47,8 @@ fi
 #       -v        output potential variant sites only (force -c)
 #==========================================================================================================
 
-module load BCFtools/1.3.1
-module load SAMtools/1.3.1
+module load bcftools/1.3.1
+module load samtools/1.3.1
 
 ##adding -I skips Indels
 #bcftools view -I -bvcg - > variants.bcf
@@ -65,12 +65,13 @@ get_variants() {
 # -o is output
 # -f fasta reference file
 	# bcftools mpileup -Ob -o <study.bcf> -f <ref.fa> <sample1.bam>
-	bcftool mpileup -Ob -o ${output}/${name}.bcf> -f ${reference} ${name}.bam
+	bcftool mpileup -Ob -o ${output}/${name}.bcf > -f ${reference} ${name}_combined.bam
 # -v = vatriants only
 # -m = mark sites
-# -O z = compressed VCF
+# -Oz = compressed VCF
+# -Ov = uncompressed VCF
 	# bcftools call -vmO z -o <study.vcf.gz> <study.bcf>
-	bcftools call -vmO z -o ${name}.vcf.gz ${name}.bcf
+	bcftools call -vmOv -o ${name}.vcf.gz ${name}.bcf
 }
 export -f get_variants
 
@@ -80,6 +81,6 @@ ls *_combined.bam | cut -d "." -f "1" | parallel fastqToBam {} $g $o
 # bam file example KLC098_USD16091388L_HKFJFDSXX_L4_paired_1.bam
 # bam file example KLC098_USD16091388L_HKFJFDSXX.bam
 
-module unload BCFtools/1.3.1
-module unload SAMtools/1.3.1
+module unload bcftools/1.3.1
+module unload samtools/1.3.1
 }
