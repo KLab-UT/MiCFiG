@@ -47,8 +47,8 @@ fi
 #       -v        output potential variant sites only (force -c)
 #==========================================================================================================
 
-module load bcftools/1.3.1
-module load samtools/1.3.1
+module load bcftools/1.16
+module load samtools/1.16
 
 ##adding -I skips Indels
 #bcftools view -I -bvcg - > variants.bcf
@@ -81,6 +81,6 @@ ls *_combined.bam | cut -d "." -f "1" | parallel fastqToBam {} $g $o
 # bam file example KLC098_USD16091388L_HKFJFDSXX_L4_paired_1.bam
 # bam file example KLC098_USD16091388L_HKFJFDSXX.bam
 
-module unload bcftools/1.3.1
-module unload samtools/1.3.1
+module unload bcftools/1.16
+module unload samtools/1.16
 }
