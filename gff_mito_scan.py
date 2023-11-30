@@ -106,6 +106,22 @@ def Create_Log_File(terms_list, gff, log):
                     print('HIT:\n\tterm:' + term + '\n\tgff:' + line, file = log)
                     #writes to the log file
     return
+##I WOULD SUGGEST USING PANDAS TO PARSE YOUR TSV FILE.  MAKE A DICTIONARY WHERE EACH KEY IS DIFFERNET CATEGORIES AND VALUES ARE A LIST OF THE SYMBOLS FOR THAT CATEGORY
+'''
+#ASSUMING YOUR FILE IS A TSV
+import pandas as pd
+df = pd.read_csv(infile, sep="\t")
+label_dict = {}
+
+for index, row in df.itterrows():
+    label = row["lable"]
+    symbol = row["symbol"]
+    if label not in label_dict.keys():
+        label_dict[label] = []
+    label_dict[label].append(symbol)
+'''
+        
+    
 
 def main():
     '''
