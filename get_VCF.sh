@@ -77,7 +77,7 @@ export -f get_variants
 
 echo "Getting Variants."
 cd $i
-ls *_combined.bam | cut -d "." -f "1" | parallel fastqToBam {} $g $o
+ls *_combined.bam | cut -d "." -f "1" | parallel get_variants {} $g $o
 # bam file example KLC098_USD16091388L_HKFJFDSXX_L4_paired_1.bam
 # bam file example KLC098_USD16091388L_HKFJFDSXX.bam
 
