@@ -6,8 +6,8 @@ Scripts used to examine the amount of genetic variation in nuclear-encoded mitoc
 - [Abstract](#abstract)
 - [Hypothesis](#hypothesis)
 - [Methods](#methods)
-  - [Walkthrough 1](#walkthrough-1)
-  - [Walkthrough 2](#walkthrough-2)
+  - [Gff_Mito_Scan](#walkthrough-Gff_Mito_Scan)
+  - [Match_Data](#walkthrough-Match_Data)
   - [Pipeline](#pipeline)
 - [Next Steps](#nextsteps)
 
@@ -35,9 +35,7 @@ Clone the repository by navigating to the top of this page and clicking code and
 
 Once you have cloned the repository 'cd' into it and we can get started. 
 
-
-
-## Walkthrough-1
+## Walkthrough-Gff_Mito_Scan
 
 Starting with the best annotated genome, `a_marmoratus_AspMarm2.0_v1.gff`, we will sort out all of the NMT genes using the file, `Human.MitoCarta3.0.csv`. This file contains all of the human NMT genes with all of their symbol names. These names will be used to sort through the gff file and pull out any of the *Amlops marmoratus* genes which have the same symbol name. 
 
@@ -71,7 +69,7 @@ The log file showing which terms hit which gene:
 
 Once the desired output is obtained we can move on to the next script to obtain some data about the sorted genes. 
 
-## Walkthrough-2
+## Walkthrough-Match_Data
 
 Starting with the `Human.MitoCarta3.0.csv` file again and the `log_file.txt` (or whatever you named your log file) we will create a bar plot to represent how many hits we got in each category of gene. All of the genes in the `Human.MitoCarta3.0.csv` file were sorted into each of the four categories: 'ETC', 'Ribosomal', 'Mitochondria', and 'tRNA'. 
 
