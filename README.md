@@ -28,11 +28,13 @@ of the parthenogenetic species. If no variation is present in NMT genes between 
 # Methods
 As a first step in this project, we will be determining whether the parental species have differences in their NMT genes, to determine if there are inter-genomic interactions. To do this we first need to determine which genes are NMT genes. 
 
-Clone the repository by copying the following code and entering it into the command line:
+Clone the repository by navigating to the top of this page and clicking code and then copying either the https or SSH keys version. Enter the following code in the command line in the command line in the directory you want to clone it in:
 
-```
-   git clone https://github.com/KLab-UT/BAM_comparative_genetics.git
-```
+  ```
+    git clone "link you copied"
+  ```
+
+Once you have cloned the repository 'cd' into it and we can get started. 
 
 
 
@@ -40,6 +42,31 @@ Clone the repository by copying the following code and entering it into the comm
 
 Starting with the best annotated genome, `a_marmoratus_AspMarm2.0_v1.gff`, we will sort out all of the NMT genes using the file, 'Human.MitoCarta3.0.csv'. This file contains all of the human NMT genes with all of their symbol names. These names will be used to sort through the gff file and pull out any of the *Amlops marmoratus* genes which have the same symbol name. 
 
-To do this, after cloning the 
+To do this we will use `gff_mito_scan.py`. Copy the following and paste it into the command line so we can understand the file and what is required. 
 
+  ```
+    vim gff_mito_scan.py
+  ```
+
+Now that we understand what we will need to run the file, lets copy the following code and paste it into the command line to sort through the gff file and produce our log file. 
+
+  ```
+    python gff_mito_scan.py -m Human.MitoCarta3.0.csv -g a_marmoratus_AspMarm2.0_v1.gff
+  ```
+
+Or if you would like to give another name to your output files copy the following and enter your desired file names. 
+
+  ```
+    python gff_mito_scan.py -m Human.MitoCarta3.0.csv -g a_marmoratus_AspMarm2.0_v1.gff -o 'name of output file'.gff -l 'name of log file'.txt
+  ```
+
+The desired output should resemble the following.
+
+The sorted NMT genes in a gff file:
+
+![alt text](NMTgff.png "NMT Sorted Genes gff File")
+
+The log file showing which terms hit which gene:
+
+![alt text](Log.png "Log File with hits")
 
