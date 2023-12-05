@@ -22,10 +22,7 @@ We hypothesize that lower endurance and mitochondrial respiration in these lizar
   - Inter-genomic refers to interactions between parental genomes (between gene products of maternal ancestry and gene products of paternal ancestry).
   - Intra-genomic refers to interactions within a parental genome (e.g., between nuclear gene products of maternal ancestry and mitochondrial gene products of maternal ancestry). 
 
-Examining the NMT genetic variability between the sexual parental species provides a base for testing the inter-genomic hypothesis: If we find variation in NMT genes between hybridizing species, this variation is likely present in the 
- "frozen"\*\* 
- genomes 
-of the parthenogenetic species. If no variation is present in NMT genes between hybridizing species, then a source other than reduced compatibility between the divergent genomes is responsible for the reduced performance in parthenogens (e.g., intra-genomic interactions). 
+Examining the NMT genetic variability between the sexual parental species provides a base for testing the inter-genomic hypothesis: If we find variation in NMT genes between hybridizing species, this variation is likely present in the genomes of the parthenogenetic species. If no variation is present in NMT genes between hybridizing species, then a source other than reduced compatibility between the divergent genomes is responsible for the reduced performance in parthenogens (e.g., intra-genomic interactions). 
 
 # Methods
 As a first step in this project, we will be determining whether the parental species have differences in their NMT genes, to determine if there are inter-genomic interactions. To do this we first need to determine which genes are NMT genes. 
@@ -94,7 +91,7 @@ The desired output should resemble the following.
 
 The bar plot:
 
-![alt text](my_fig.png "dBar Plot of Figure Data")
+![alt text](my_fig.png "Bar Plot of Figure Data")
 
 Once we have the desired output we can move on to big picture tying in the rest of the code.
 
