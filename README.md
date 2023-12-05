@@ -91,7 +91,7 @@ The desired output should resemble the following.
 
 The bar plot:
 
-![alt text](my_fig.png "Bar Plot of Figure Data")
+![alt text](Bar_Plt.png "Bar Plot of Figure Data")
 
 Once we have the desired output we can move on to big picture tying in the rest of the code.
 
