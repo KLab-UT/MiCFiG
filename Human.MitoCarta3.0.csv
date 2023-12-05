@@ -1,18 +1,18 @@
 ﻿Symbol,Synonyms,Description,Category
 CYC1,MC3DN6|UQCR4,cytochrome c1,ETC
 SDHB,CWS2|IP|PGL4|SDH|SDH1|SDH2|SDHIP,succinate dehydrogenase complex iron sulfur subunit B,ETC
-COQ7,CAT5|CLK-1|CLK1|COQ10D8,"coenzyme Q7, hydroxylase",ETC
+COQ7,CAT5|CLK-1|CLK1|COQ10D8,coenzyme Q7- hydroxylase,ETC
 SDHA,CMD1GG|FP|PGL5|SDH1|SDH2|SDHF,succinate dehydrogenase complex flavoprotein subunit A,ETC
 UQCRC1,D3S3191|QCR1|UQCR1,ubiquinol-cytochrome c reductase core protein 1,ETC
-COQ5,-,"coenzyme Q5, methyltransferase",ETC
+COQ5,-,coenzyme Q5- methyltransferase,ETC
 PDHA1,PDHA|PDHAD|PDHCE1A|PHE1A,pyruvate dehydrogenase E1 subunit alpha 1,mitochondria
 COQ9,C16orf49|COQ10D5,coenzyme Q9,ETC
 MRPL12,5c5-2|L12mt|MRP-L31/34|MRPL7|MRPL7/L12|RPML12,mitochondrial ribosomal protein L12,Ribosomal
 ATP5F1D,ATP5D|MC5DN5,ATP synthase F1 subunit delta,ETC
 COX5A,COX|COX-VA|VA,cytochrome c oxidase subunit 5A,ETC
 ISCA2,HBLD1|ISA2|MMDS4|c14_5557,iron-sulfur cluster assembly 2,ETC
-PMPCB,Beta-MPP|MPP11|MPPB|MPPP52|P-52,"peptidase, mitochondrial processing subunit beta",mitochondria
-UQCRFS1,MC3DN10|RIP1|RIS1|RISP|UQCR5,"ubiquinol-cytochrome c reductase, Rieske iron-sulfur polypeptide 1",ETC
+PMPCB,Beta-MPP|MPP11|MPPB|MPPP52|P-52,peptidase- mitochondrial processing subunit beta,mitochondria
+UQCRFS1,MC3DN10|RIP1|RIS1|RISP|UQCR5,ubiquinol-cytochrome c reductase- Rieske iron-sulfur polypeptide 1,ETC
 ATP5F1A,ATP5A|ATP5A1|ATP5AL2|ATPM|COXPD22|HEL-S-123m|MC5DN4|MOM2|OMR|ORM|hATP1,ATP synthase F1 subunit alpha,ETC
 OGDH,AKGDH|E1k|KGD1|OGDC|OGDH2,oxoglutarate dehydrogenase,mitochondria
 PDHB,PDHBD|PDHE1-B|PDHE1B|PHE1B,pyruvate dehydrogenase E1 subunit beta,mitochondria
@@ -26,7 +26,7 @@ PDK4,-,pyruvate dehydrogenase kinase 4,mitochondria
 MDH2,EIEE51|M-MDH|MDH|MGC:3559|MOR1,malate dehydrogenase 2,mitochondria
 MRPS27,MRP-S27|S27mt,mitochondrial ribosomal protein S27,Ribosomal
 CS,-,citrate synthase,mitochondria
-GRPEL1,GrpE|HMGE|mt-GrpE#1,"GrpE like 1, mitochondrial",mitochondria
+GRPEL1,GrpE|HMGE|mt-GrpE#1,GrpE like 1- mitochondrial,mitochondria
 DLAT,DLTA|E2|PBC|PDC-E2|PDCE2,dihydrolipoamide S-acetyltransferase,mitochondria
 LRPPRC,CLONE-23970|GP130|LRP130|LSFC,leucine rich pentatricopeptide repeat containing,mitochondria
 DLST,DLTS|KGD2|PGL7,dihydrolipoamide S-succinyltransferase,mitochondria
@@ -39,14 +39,14 @@ ATP5F1E,ATP5E|ATPE|MC5DN3,ATP synthase F1 subunit epsilon,ETC
 SLC25A3,OK/SW-cl.48|PHC|PTP,solute carrier family 25 member 3,mitochondria
 MRPS23,CGI-138|COXPD46|HSPC329|MRP-S23,mitochondrial ribosomal protein S23,Ribosomal
 FH,FMRD|HLRCC|HsFH|LRCC|MCL|MCUL1,fumarate hydratase,mitochondria
-PMPCA,Alpha-MPP|CLA1|CPD3|INPP5E|P-55|SCAR2,"peptidase, mitochondrial processing subunit alpha",DNA
+PMPCA,Alpha-MPP|CLA1|CPD3|INPP5E|P-55|SCAR2,peptidase- mitochondrial processing subunit alpha,DNA
 ATP5F1B,ATP5B|ATPMB|ATPSB|HEL-S-271,ATP synthase F1 subunit beta,ETC
 SDHAF4,C6orf57|Sdh8,succinate dehydrogenase complex assembly factor 4,ETC
-UQCR10,HSPC051|HSPC119|HSPC151|QCR9|UCCR7.2|UCRC,"ubiquinol-cytochrome c reductase, complex III subunit X",ETC
+UQCR10,HSPC051|HSPC119|HSPC151|QCR9|UCCR7.2|UCRC,ubiquinol-cytochrome c reductase- complex III subunit X,ETC
 ISCA1,HBLD2|ISA1|MMDS5|hIscA,iron-sulfur cluster assembly 1,ETC
 SUCLA2,A-BETA|A-SCS|LINC00444|MTDPS5|SCS-betaA,succinate-CoA ligase ADP-forming subunit beta,ETC
-COQ3,DHHBMT|DHHBMTASE|UG0215E05|bA9819.1,"coenzyme Q3, methyltransferase",ETC
-IARS2,CAGSSS|ILERS,"isoleucyl-tRNA synthetase 2, mitochondrial",tRNA
+COQ3,DHHBMT|DHHBMTASE|UG0215E05|bA9819.1,coenzyme Q3- methyltransferase,ETC
+IARS2,CAGSSS|ILERS,isoleucyl-tRNA synthetase 2- mitochondrial,tRNA
 MRPS15,DC37|MPR-S15|RPMS15|S15mt,mitochondrial ribosomal protein S15,Ribosomal
 IDH3A,-,isocitrate dehydrogenase (NAD(+)) 3 catalytic subunit alpha,mitochondria
 COX11,COX11P,cytochrome c oxidase copper chaperone COX11,ETC
@@ -58,7 +58,7 @@ BCKDHA,BCKDE1A|MSU|MSUD1|OVD1A,branched chain keto acid dehydrogenase E1 subunit
 UQCRH,QCR6|UQCR8,ubiquinol-cytochrome c reductase hinge protein,ETC
 HIGD2A,RCF1b,HIG1 hypoxia inducible domain family member 2A,ETC
 ATP5PO,ATP5O|ATPO|HMC08D05|OSCP,ATP synthase peripheral stalk subunit OSCP,ETC
-ECHS1,ECHS1D|SCEH,"enoyl-CoA hydratase, short chain 1",mitochondria
+ECHS1,ECHS1D|SCEH,enoyl-CoA hydratase- short chain 1,mitochondria
 LETMD1,1110019O13Rik|HCCR|HCCR-1|HCCR-2|HCCR1|HCCR2|HCRR-2|SLC55A3,LETM1 domain containing 1,mitochondria
 COX6A1,CMTRID|COX6A|COX6AL,cytochrome c oxidase subunit 6A1,ETC
 COX15,CEMCOX2,cytochrome c oxidase assembly homolog COX15,ETC
@@ -69,7 +69,7 @@ NDUFS7,CI-20|CI-20KD|MC1DN3|MY017|PSST,NADH:ubiquinone oxidoreductase core subun
 CPT2,CPT1|CPTASE|IIAE4,carnitine palmitoyltransferase 2,mitochondria
 BCKDHB,BCKDE1B|BCKDH E1-beta|E1B,branched chain keto acid dehydrogenase E1 subunit beta,mitochondria
 IDH3B,RP46,isocitrate dehydrogenase (NAD(+)) 3 non-catalytic subunit beta,mitochondria
-LARS2,HLASA|LEURS|PRLTS4|mtLeuRS,"leucyl-tRNA synthetase 2, mitochondrial",tRNA
+LARS2,HLASA|LEURS|PRLTS4|mtLeuRS,leucyl-tRNA synthetase 2- mitochondrial,tRNA
 ACADS,ACAD3|SCAD,acyl-CoA dehydrogenase short chain,ETC
 LETM1,SLC55A1,leucine zipper and EF-hand containing transmembrane protein 1,mitochondria
 ATP5ME,ATP5I|ATP5K,ATP synthase membrane subunit e,ETC
@@ -77,12 +77,12 @@ OPA1,BERHS|MGM1|MTDPS14|NPG|NTG|largeG,OPA1 mitochondrial dynamin like GTPase,mi
 AUH,-,AU RNA binding methylglutaconyl-CoA hydratase,ETC
 SUCLG1,GALPHA|MTDPS9|SUCLA1,succinate-CoA ligase GDP/ADP-forming subunit alpha,ETC
 NDUFV2,CI-24k|MC1DN7,NADH:ubiquinone oxidoreductase core subunit V2,ETC
-COQ6,CGI-10|CGI10|COQ10D6,"coenzyme Q6, monooxygenase",ETC
+COQ6,CGI-10|CGI10|COQ10D6,coenzyme Q6- monooxygenase,ETC
 MRPL43,L43mt|MRP-L43|bMRP36a,mitochondrial ribosomal protein L43,Ribosomal
 ABHD11,PP1226|WBSCR21,abhydrolase domain containing 11,mitochondria
 ATP5PF,ATP5|ATP5A|ATP5J|ATPM|CF6|F6,ATP synthase peripheral stalk subunit F6,ETC
 NDUFB8,ASHI|CI-ASHI|MC1DN32,NADH:ubiquinone oxidoreductase subunit B8,ETC
-LONP1,CODASS|LON|LONP|LonHS|PIM1|PRSS15|hLON,"lon peptidase 1, mitochondrial",mitochondria
+LONP1,CODASS|LON|LONP|LonHS|PIM1|PRSS15|hLON,lon peptidase 1- mitochondrial,mitochondria
 DLD,DLDD|DLDH|E3|GCSL|LAD|OGDC-E3|PHE3,dihydrolipoamide dehydrogenase,mitochondria
 AIFM1,AIF|AUNX1|CMT2D|CMTX4|COWCK|COXPD6|DFNX5|NADMR|NAMSD|PDCD8|SEMDHL,apoptosis inducing factor mitochondria associated 1,ETC
 ECHDC3,-,enoyl-CoA hydratase domain containing 3,ETC
@@ -108,7 +108,7 @@ HSPA9,CRP40|CSA|EVPLS|GRP-75|GRP75|HEL-S-124m|HSPA9B|MOT|MOT2|MTHSP75|PBP74|SAAN
 SURF1,CMT4K,SURF1 cytochrome c oxidase assembly factor,ETC
 PRDX3,AOP-1|AOP1|HBC189|MER5|PRO1748|SP-22|prx-III,peroxiredoxin 3,mitochondria
 GHITM,DERP2|HSPC282|MICS1|My021|PTD010|TMBIM5,growth hormone inducible transmembrane protein,mitochondria
-GUF1,EF-4|EF4|EIEE40,"GUF1 homolog, GTPase",Ribosomal
+GUF1,EF-4|EF4|EIEE40,GUF1 homolog- GTPase,Ribosomal
 TIMM13,TIM13|TIM13B|TIMM13A|TIMM13B|ppv1,translocase of inner mitochondrial membrane 13,ETC
 LYRM4,C6orf149|CGI-203|COXPD19|ISD11,LYR motif containing 4,ETC
 MRPL16,L16mt|MRP-L16|PNAS-111,mitochondrial ribosomal protein L16,Ribosomal
@@ -203,11 +203,11 @@ SLC25A42,MECREN,solute carrier family 25 member 42,mitochondria
 TOMM7,TOM7,translocase of outer mitochondrial membrane 7,mitochondria
 ECH1,HPXEL,enoyl-CoA hydratase 1,ETC
 GATB,COXPD41|HSPC199|PET112|PET112L,glutamyl-tRNA amidotransferase subunit B,tRNA
-BCS1L,BCS|BCS1|BJS|FLNMS|GRACILE|Hs.6719|MC3DN1|PTD|h-BCS|h-BCS1,"BCS1 homolog, ubiquinol-cytochrome c reductase complex chaperone",ETC
+BCS1L,BCS|BCS1|BJS|FLNMS|GRACILE|Hs.6719|MC3DN1|PTD|h-BCS|h-BCS1,BCS1 homolog- ubiquinol-cytochrome c reductase complex chaperone,ETC
 ERAL1,CEGA|ERA|ERA-W|ERAL1A|ERAL1B|H-ERA|HERA-A|HERA-B|PRLTS6,Era like 12S mitochondrial rRNA chaperone 1,Ribosomal
 CMC1,C3orf68,C-X9-C motif containing 1,mitochondria
 MRPL28,MAAT1|p15,mitochondrial ribosomal protein L28,Ribosomal
-TSFM,EFTS|EFTSMT,"Ts translation elongation factor, mitochondrial",DNA
+TSFM,EFTS|EFTSMT,Ts translation elongation factor- mitochondrial,DNA
 FXN,CyaY|FA|FARR|FRDA|X25,frataxin,ETC
 NFU1,CGI-33|HIRIP|HIRIP5|MMDS1|NIFUC|Nfu|NifU,NFU1 iron-sulfur cluster scaffold,ETC
 YARS2,CGI-04|MLASA2|MT-TYRRS|TYRRS,tyrosyl-tRNA synthetase 2,tRNA
@@ -227,7 +227,7 @@ MRPL24,L24mt|MRP-L18|MRP-L24,mitochondrial ribosomal protein L24,Ribosomal
 HSPD1,CPN60|GROEL|HLD4|HSP-60|HSP60|HSP65|HuCHA60|SPG13,heat shock protein family D (Hsp60) member 1,mitochondria
 NDUFS5,CI-15k|CI15K,NADH:ubiquinone oxidoreductase subunit S5,ETC
 AK3,AK3L1|AK6|AKL3L|AKL3L1|FIX,adenylate kinase 3,mitochondria
-CYCS,CYC|HCS|THC4,"cytochrome c, somatic",ETC
+CYCS,CYC|HCS|THC4,cytochrome c- somatic,ETC
 MIPEP,COXPD31|HMIP|MIP,mitochondrial intermediate peptidase,ETC
 LYRM7,C5orf31|MC3DN8|MZM1L,LYR motif containing 7,ETC
 CRAT,CAT|CAT1|NBIA8,carnitine O-acetyltransferase,mitochondria
@@ -250,14 +250,14 @@ MRPL19,L19mt|MRP-L15|MRP-L19|MRPL15|RLX1|RPML15,mitochondrial ribosomal protein 
 MRPL36,BRIP1|L36mt|MRP-L36|PRPL36|RPMJ,mitochondrial ribosomal protein L36,Ribosomal
 SLC25A30,KMCP1,solute carrier family 25 member 30,mitochondria
 BDH1,BDH|SDR9C1,3-hydroxybutyrate dehydrogenase 1,ETC
-FARS2,COXPD14|FARS1|HSPC320|PheRS|SPG77|mtPheRS,"phenylalanyl-tRNA synthetase 2, mitochondrial",tRNA
+FARS2,COXPD14|FARS1|HSPC320|PheRS|SPG77|mtPheRS,phenylalanyl-tRNA synthetase 2- mitochondrial,tRNA
 ABCB7,ABC7|ASAT|Atm1p|EST140535,ATP binding cassette subfamily B member 7,ETC
 MTX1,MTX|MTXN,metaxin 1,mitochondria
 NDUFA7,B14.5a|CI-B14.5a,NADH:ubiquinone oxidoreductase subunit A7,ETC
 TIMM17A,TIM17|TIM17A,translocase of inner mitochondrial membrane 17A,ETC
 ALDH9A1,ALDH4|ALDH7|ALDH9|E3|TMABA-DH|TMABADH|TMABALDH,aldehyde dehydrogenase 9 family member A1,mitochondria
 MRPS18C,CGI-134|MRP-S18-1|MRP-S18-c|MRPS18-1|S18mt-c|mrps18-c,mitochondrial ribosomal protein S18C,Ribosomal
-MARS2,COXPD25|MetRS|mtMetRS,"methionyl-tRNA synthetase 2, mitochondrial",tRNA
+MARS2,COXPD25|MetRS|mtMetRS,methionyl-tRNA synthetase 2- mitochondrial,tRNA
 ALDH6A1,MMSADHA|MMSDH,aldehyde dehydrogenase 6 family member A1,ETC
 FDXR,ADR|ADXR|ANOA,ferredoxin reductase,ETC
 GATC,15E1.2|COXPD42,glutamyl-tRNA amidotransferase subunit C,tRNA
@@ -299,7 +299,7 @@ MRPL47,CGI-204|L47mt|MRP-L47|NCM1,mitochondrial ribosomal protein L47,Ribosomal
 PPA2,HSPC124|SCFAI|SCFI|SID6-306,inorganic pyrophosphatase 2,mitochondria
 MRPL9,L9mt,mitochondrial ribosomal protein L9,Ribosomal
 CHCHD10,C22orf16|FTDALS2|IMMD|MIX17A|N27C7-4|SMAJ,coiled-coil-helix-coiled-coil-helix domain containing 10,mitochondria
-WARS2,NEMMLAS|TrpRS|mtTrpRS,"tryptophanyl tRNA synthetase 2, mitochondrial",tRNA
+WARS2,NEMMLAS|TrpRS|mtTrpRS,tryptophanyl tRNA synthetase 2- mitochondrial,tRNA
 SLC25A19,DNC|MCPHA|MUP1|THMD3|THMD4|TPC,solute carrier family 25 member 19,mitochondria
 CBR4,SDR45C1,carbonyl reductase 4,ETC
 SMDT1,C22orf32|DDDD|EMRE,single-pass membrane protein with aspartate rich tail 1,mitochondria
@@ -329,7 +329,7 @@ MRPS5,MRP-S5|S5mt,mitochondrial ribosomal protein S5,Ribosomal
 C6orf136,-,chromosome 6 open reading frame 136,DNA
 SPRYD4,-,SPRY domain containing 4,DNA
 LIPT2,-,lipoyl(octanoyl) transferase 2,mitochondria
-DECR1,DECR|NADPH|SDR18C1,"2,4-dienoyl-CoA reductase 1",ETC
+DECR1,DECR|NADPH|SDR18C1,2-4-dienoyl-CoA reductase 1,ETC
 MRPS26,C20orf193|GI008|MRP-S13|MRP-S26|MRPS13|NY-BR-87|RPMS13|dJ534B8.3,mitochondrial ribosomal protein S26,Ribosomal
 SLC25A15,D13S327|HHH|LNC-HC|ORC1|ORNT1,solute carrier family 25 member 15,mitochondria
 NDUFV3,CI-10k|CI-9KD,NADH:ubiquinone oxidoreductase subunit V3,ETC
@@ -377,12 +377,12 @@ MCEE,GLOD2|MCE,methylmalonyl-CoA epimerase,ETC
 MOCS1,MIG11|MOCOD|MOCS1A|MOCS1B,molybdenum cofactor synthesis 1,mitochondria
 MMUT,MCM|MUT,methylmalonyl-CoA mutase,ETC
 SLC25A51,CG7943|MCART1,solute carrier family 25 member 51,mitochondria
-SPG7,CAR|CMAR|PGN|SPG5C,"SPG7 matrix AAA peptidase subunit, paraplegin",mitochondria
+SPG7,CAR|CMAR|PGN|SPG5C,SPG7 matrix AAA peptidase subunit- paraplegin,mitochondria
 ATP5MC3,ATP5G3|P3,ATP synthase membrane subunit c locus 3,ETC
 ATAD1,AFDC1|FNP001|HKPX4|Msp1|THORASE,ATPase family AAA domain containing 1,ETC
 OXNAD1,-,oxidoreductase NAD binding domain containing 1,ETC
 MTG2,GTPBP5|ObgH1|dJ1005F21.2,mitochondrial ribosome associated GTPase 2,Ribosomal
-DARS2,ASPRS|LBSL|MT-ASPRS|mtAspRS,"aspartyl-tRNA synthetase 2, mitochondrial",tRNA
+DARS2,ASPRS|LBSL|MT-ASPRS|mtAspRS,aspartyl-tRNA synthetase 2- mitochondrial,tRNA
 MRPL51,CDA09|HSPC241|MRP64|bMRP64,mitochondrial ribosomal protein L51,Ribosomal
 PC,PCB,pyruvate carboxylase,mitochondria
 CLYBL,CLB,citramalyl-CoA lyase,ETC
@@ -396,7 +396,7 @@ PRODH2,HSPOX1|HYPDH,proline dehydrogenase 2,mitochondria
 NIT2,HEL-S-8a,nitrilase family member 2,mitochondria
 FDX2,FDX1L|MEOAL,ferredoxin 2,ETC
 ME2,ODS1,malic enzyme 2,mitochondria
-TUFM,COXPD4|EF-TuMT|EFTU|P43,"Tu translation elongation factor, mitochondrial",ETC
+TUFM,COXPD4|EF-TuMT|EFTU|P43,Tu translation elongation factor- mitochondrial,ETC
 COX6A2,COX6AH|COXVIAH,cytochrome c oxidase subunit 6A2,ETC
 SLC30A9,BILAPES|C4orf1|GAC63|HUEL|ZNT9,solute carrier family 30 member 9,mitochondria
 TAMM41,C3orf31|RAM41|TAM41,TAM41 mitochondrial translocator assembly and maintenance homolog,mitochondria
@@ -408,12 +408,12 @@ CHCHD4,MIA40|TIMM40,coiled-coil-helix-coiled-coil-helix domain containing 4,mito
 NDUFAB1,ACP|ACP1|FASN2A|SDAP,NADH:ubiquinone oxidoreductase subunit AB1,ETC
 ACSM1,BUCS1|MACS1,acyl-CoA synthetase medium chain family member 1,DNA
 COA5,6330578E17Rik|C2orf64|CEMCOX3|Pet191,cytochrome c oxidase assembly factor 5,ETC
-COQ2,CL640|COQ10D1|MSA1|PHB:PPT,"coenzyme Q2, polyprenyltransferase",ETC
+COQ2,CL640|COQ10D1|MSA1|PHB:PPT,coenzyme Q2- polyprenyltransferase,ETC
 PDSS2,C6orf210|COQ10D3|COQ1B|DLP1|bA59I9.3|hDLP1,decaprenyl diphosphate synthase subunit 2,ETC
 EHHADH,ECHD|FRTS3|L-PBE|LBFP|LBP|MFE1|PBFE,enoyl-CoA hydratase and 3-hydroxyacyl CoA dehydrogenase,ETC
 NDUFS3,CI-30|MC1DN8,NADH:ubiquinone oxidoreductase core subunit S3,ETC
 ABCB10,EST20237|M-ABC2|MTABC2,ATP binding cassette subfamily B member 10,ETC
-CKMT2,SMTCK,"creatine kinase, mitochondrial 2",mitochondria
+CKMT2,SMTCK,creatine kinase- mitochondrial 2,mitochondria
 MRPS25,MRP-S25|RPMS25,mitochondrial ribosomal protein S25,Ribosomal
 ACAD9,MC1DN20|NPD002,acyl-CoA dehydrogenase family member 9,ETC
 COX16,C14orf112|HSPC203|hCOX16,cytochrome c oxidase assembly factor COX16,ETC
@@ -422,7 +422,7 @@ ACOT13,HT012|PNAS-27|THEM2,acyl-CoA thioesterase 13,ETC
 CPT1A,CPT1|CPT1-L|L-CPT1,carnitine palmitoyltransferase 1A,mitochondria
 DHRS4,CR|NRDR|PHCR|PSCD|SCAD-SRL|SDR-SRL|SDR25C1|SDR25C2,dehydrogenase/reductase 4,ETC
 PRELID2,-,PRELI domain containing 2,mitochondria
-CARS2,COXPD27|cysRS,"cysteinyl-tRNA synthetase 2, mitochondrial",tRNA
+CARS2,COXPD27|cysRS,cysteinyl-tRNA synthetase 2- mitochondrial,tRNA
 NIPSNAP2,GBAS,nipsnap homolog 2,ETC
 NDUFB7,B18|CI-B18,NADH:ubiquinone oxidoreductase subunit B7,ETC
 MICOS13,C19orf70|MIC13|P117|QIL1,mitochondrial contact site and cristae organizing system subunit 13,mitochondria
@@ -430,7 +430,7 @@ GLRX2,CGI-133|GRX2,glutaredoxin 2,mitochondria
 MRPS30,MRP-S30|PAP|PDCD9|S30mt,mitochondrial ribosomal protein S30,Ribosomal
 SCO2,CEMCOX1|ECGF1|Gliostatin|MYP6|PD-ECGF|SCO1L|TP|TYMP|TdRPase,synthesis of cytochrome C oxidase 2,ETC
 HSD17B10,17b-HSD10|ABAD|CAMR|DUPXp11.22|ERAB|HADH2|HCD2|HSD10MD|MHBD|MRPP2|MRX17|MRX31|MRXS10|SCHAD|SDR5C1,hydroxysteroid 17-beta dehydrogenase 10,ETC
-NARS2,DFNB94|SLM5|asnRS,"asparaginyl-tRNA synthetase 2, mitochondrial",tRNA
+NARS2,DFNB94|SLM5|asnRS,asparaginyl-tRNA synthetase 2- mitochondrial,tRNA
 RPUSD3,-,RNA pseudouridine synthase D3,Ribosomal
 SUOX,-,sulfite oxidase,mitochondria
 SARDH,BPR-2|DMGDHL1|SAR|SARD|SDH,sarcosine dehydrogenase,ETC
@@ -452,7 +452,7 @@ SLC25A18,GC2,solute carrier family 25 member 18,mitochondria
 TRNT1,CCA1|CGI-47|MtCCA|RPEM|SIFD,tRNA nucleotidyl transferase 1,tRNA
 IDE,INSULYSIN,insulin degrading enzyme,mitochondria
 GSTK1,GST|GST 13-13|GST13|GST13-13|GSTK1-1|hGSTK1,glutathione S-transferase kappa 1,mitochondria
-VARS2,COXPD20|VALRS|VARS2L|VARSL,"valyl-tRNA synthetase 2, mitochondrial",tRNA
+VARS2,COXPD20|VALRS|VARS2L|VARSL,valyl-tRNA synthetase 2- mitochondrial,tRNA
 HSPE1,CPN10|EPF|GROES|HSP10,heat shock protein family E (Hsp10) member 1,mitochondria
 MRPL54,L54mt|MRP-L54,mitochondrial ribosomal protein L54,Ribosomal
 MRPL38,HSPC262|L38MT|MRP-L3|MRP-L38|RPML3,mitochondrial ribosomal protein L38,Ribosomal
@@ -494,16 +494,16 @@ NDUFB3,B12|CI-B12|MC1DN25,NADH:ubiquinone oxidoreductase subunit B3,ETC
 REXO2,CGI-114|REX2|RFN|SFN,RNA exonuclease 2,DNA
 GATM,AGAT|AT|CCDS3|FRTS1,glycine amidinotransferase,mitochondria
 TIMM10B,FXC1|TIM10B|Tim9b,translocase of inner mitochondrial membrane 10B,ETC
-SARS2,SARS|SARSM|SERS|SYS|SerRS|SerRSmt|mtSerRS,"seryl-tRNA synthetase 2, mitochondrial",tRNA
+SARS2,SARS|SARSM|SERS|SYS|SerRS|SerRSmt|mtSerRS,seryl-tRNA synthetase 2- mitochondrial,tRNA
 CHDH,-,choline dehydrogenase,mitochondria
 MRPL57,MRP63|bMRP63,mitochondrial ribosomal protein L57,Ribosomal
 C8orf82,-,chromosome 8 open reading frame 82,DNA
-EARS2,COXPD12|MSE1|gluRS|mtGlnRS,"glutamyl-tRNA synthetase 2, mitochondrial",tRNA
+EARS2,COXPD12|MSE1|gluRS|mtGlnRS,glutamyl-tRNA synthetase 2- mitochondrial,tRNA
 GRHPR,GLXR|GLYD|PH2,glyoxylate and hydroxypyruvate reductase,mitochondria
 MTFMT,COXPD15|FMT1|MC1DN27,mitochondrial methionyl-tRNA formyltransferase,tRNA
 PTCD2,-,pentatricopeptide repeat domain 2,ETC
 ECHDC1,HEL-S-76|MMCD|dJ351K20.2,ethylmalonyl-CoA decarboxylase 1,ETC
-HARS2,HARSL|HARSR|HO3|HisRS|PRLTS2,"histidyl-tRNA synthetase 2, mitochondrial",tRNA
+HARS2,HARSL|HARSR|HO3|HisRS|PRLTS2,histidyl-tRNA synthetase 2- mitochondrial,tRNA
 NDUFA4,CI-9k|CI-MLRQ|COXFA4|MLRQ,NDUFA4 mitochondrial complex associated,ETC
 NDUFA13,B16.6|CDA016|CGI-39|GRIM-19|GRIM19|MC1DN28,NADH:ubiquinone oxidoreductase subunit A13,ETC
 NAXE,AIBP|APOA1BP|PEBEL|YJEFN1,NAD(P)HX epimerase,mitochondria
@@ -515,14 +515,14 @@ NDUFAF7,C2orf56|MidA|PRO1853,NADH:ubiquinone oxidoreductase complex assembly fac
 OAT,GACR|HOGA|OATASE|OKT,ornithine aminotransferase,mitochondria
 MRPL50,MRP-L50,mitochondrial ribosomal protein L50,Ribosomal
 COX7B,APLCC|LSDMCA2,cytochrome c oxidase subunit 7B,ETC
-RARS2,ArgRS|DALRD2|PCH6|PRO1992|RARSL,"arginyl-tRNA synthetase 2, mitochondrial",tRNA
+RARS2,ArgRS|DALRD2|PCH6|PRO1992|RARSL,arginyl-tRNA synthetase 2- mitochondrial,tRNA
 OXLD1,C17orf90,oxidoreductase like domain containing 1,mitochondria
 LACTB2,CGI-83,lactamase beta 2,Ribosomal
 NDUFA11,B14.7|CI-B14.7|MC1DN14,NADH:ubiquinone oxidoreductase subunit A11,ETC
 AURKAIP1,AIP|AKIP|MRP-S38,aurora kinase A interacting protein 1,mitochondria
 CHCHD7,COX23,coiled-coil-helix-coiled-coil-helix domain containing 7,mitochondria
 SHMT2,GLYA|HEL-S-51e|SHMT,serine hydroxymethyltransferase 2,mitochondria
-MTHFD2,NMDMC,"methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2, methenyltetrahydrofolate cyclohydrolase",ETC
+MTHFD2,NMDMC,methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2- methenyltetrahydrofolate cyclohydrolase,ETC
 RMDN1,CGI-90|FAM82B|RMD-1|RMD1,regulator of microtubule dynamics 1,mitochondria
 CPS1,CPSASE1|PHN,carbamoyl-phosphate synthase 1,mitochondria
 MRPL14,L14mt|L32mt|MRP-L14|MRP-L32|MRPL32|RMPL32|RPML32,mitochondrial ribosomal protein L14,Ribosomal
@@ -534,7 +534,7 @@ COA3,CCDC56|COX25|HSPC009|MITRAC12,cytochrome c oxidase assembly factor 3,ETC
 GSR,GR|GSRD|HEL-75|HEL-S-122m,glutathione-disulfide reductase,mitochondria
 ENDOG,-,endonuclease G,mitochondria
 BCAT2,BCAM|BCATM|BCT2|HVLI|PP18,branched chain amino acid transaminase 2,mitochondria
-TEFM,C17orf42,"transcription elongation factor, mitochondrial",DNA
+TEFM,C17orf42,transcription elongation factor- mitochondrial,DNA
 ACSF2,ACSMW|AVYV493,acyl-CoA synthetase family member 2,ETC
 TRMU,LCAL3|MTO2|MTU1|TRMT|TRMT1,tRNA mitochondrial 2-thiouridylase,tRNA
 MRPS22,C3orf5|COXPD5|GIBT|GK002|MRP-S22|ODG7|RPMS22,mitochondrial ribosomal protein S22,Ribosomal
@@ -547,11 +547,11 @@ NUBPL,C14orf127|IND1|MC1DN21|huInd1,nucleotide binding protein like,ETC
 LYRM2,DJ122O8.2,LYR motif containing 2,ETC
 MPV17L,M-LPH|MLPH1|MLPH2|MPV17L1,MPV17 mitochondrial inner membrane protein like,mitochondria
 GADD45GIP1,CKBBP2|CKbetaBP2|CRIF1|MRP-L59|PLINP|PLINP-1|PRG6|Plinp1,GADD45G interacting protein 1,DNA
-TFAM,MTDPS15|MTTF1|MTTFA|TCF6|TCF6L1|TCF6L2|TCF6L3,"transcription factor A, mitochondrial",DNA
+TFAM,MTDPS15|MTTF1|MTTFA|TCF6|TCF6L1|TCF6L2|TCF6L3,transcription factor A- mitochondrial,DNA
 ALDH18A1,ADCL3|ARCL3A|GSAS|P5CS|PYCS|SPG9|SPG9A|SPG9B,aldehyde dehydrogenase 18 family member A1,mitochondria
-OXSM,CEM1|FASN2D|KASI|KS,"3-oxoacyl-ACP synthase, mitochondrial",mitochondria
+OXSM,CEM1|FASN2D|KASI|KS,3-oxoacyl-ACP synthase- mitochondrial,mitochondria
 KYAT3,CCBL2|KAT3|KATIII,kynurenine aminotransferase 3,mitochondria
-TARS2,COXPD21|TARSL1|thrRS,"threonyl-tRNA synthetase 2, mitochondrial",tRNA
+TARS2,COXPD21|TARSL1|thrRS,threonyl-tRNA synthetase 2- mitochondrial,tRNA
 TBRG4,CPR2|FASTKD4,transforming growth factor beta regulator 4,ETC
 TMEM65,-,transmembrane protein 65,ETC
 ROMO1,C20orf52|MTGM|MTGMP|bA353C18.2,reactive oxygen species modulator 1,mitochondria
@@ -575,17 +575,17 @@ COX6B2,COXVIB2|CT59,cytochrome c oxidase subunit 6B2,ETC
 GLOD4,C17orf25|CGI-150|HC71,glyoxalase domain containing 4,ETC
 ACAA1,ACAA|PTHIO|THIO,acetyl-CoA acyltransferase 1,ETC
 CROT,COT,carnitine O-octanoyltransferase,mitochondria
-PDF,-,"peptide deformylase, mitochondrial",mitochondria
+PDF,-,peptide deformylase- mitochondrial,mitochondria
 COX19,-,cytochrome c oxidase assembly factor COX19,ETC
 AMT,GCE|GCST|GCVT|NKH,aminomethyltransferase,mitochondria
 PDPR,PDP3,pyruvate dehydrogenase phosphatase regulatory subunit,mitochondria
 NLN,AGTBP|EP24.16|MEP|MOP,neurolysin,mitochondria
 BOLA1,CGI-143,bolA family member 1,mitochondria
 ALAS2,ALAS-E|ALASE|ANH1|ASB|SIDBA1|XLDPP|XLEPP|XLSA,5'-aminolevulinate synthase 2,mitochondria
-GRPEL2,Mt-GrpE#2,"GrpE like 2, mitochondrial",Ribosomal
+GRPEL2,Mt-GrpE#2,GrpE like 2- mitochondrial,Ribosomal
 ALDH7A1,ATQ1|EPD|PDE,aldehyde dehydrogenase 7 family member A1,mitochondria
 HDHD5,CECR5,haloacid dehalogenase like hydrolase domain containing 5,mitochondria
-GFER,ALR|ERV1|HERV1|HPO|HPO1|HPO2|HSS|MMCHD|MPMCD,"growth factor, augmenter of liver regeneration",mitochondria
+GFER,ALR|ERV1|HERV1|HPO|HPO1|HPO2|HSS|MMCHD|MPMCD,growth factor- augmenter of liver regeneration,mitochondria
 IMMP2L,IMMP2L-IT1|IMP2|IMP2-LIKE,inner mitochondrial membrane peptidase subunit 2,mitochondria
 COX4I2,COX4|COX4-2|COX4B|COX4L2|COXIV-2|dJ857M17.2,cytochrome c oxidase subunit 4I2,ETC
 MRPL39,C21orf92|L39mt|L5mt|MRP-L5|MRPL5|MSTP003|PRED22|PRED66|RPML5,mitochondrial ribosomal protein L39,Ribosomal
@@ -594,7 +594,7 @@ FUNDC2,DC44|HCBP6|HCC3|PD03104,FUN14 domain containing 2,mitochondria
 LYPLA1,APT-1|APT1|LPL-I|LPL1|hAPT1,lysophospholipase 1,mitochondria
 PDHA2,PDHAL,pyruvate dehydrogenase E1 subunit alpha 2,mitochondria
 MTRF1L,HMRF1L|MRF1L|mtRF1a,mitochondrial translational release factor 1 like,tRNA
-GTPBP3,COXPD23|GTPBG3|MSS1|MTGP1|THDF1,"GTP binding protein 3, mitochondrial",ETC
+GTPBP3,COXPD23|GTPBG3|MSS1|MTGP1|THDF1,GTP binding protein 3- mitochondrial,ETC
 MTHFD2L,-,methylenetetrahydrofolate dehydrogenase (NADP+ dependent) 2 like,mitochondria
 YME1L1,FTSH|MEG4|OPA11|PAMP|YME1L,YME1 like 1 ATPase,mitochondria
 ACOT2,CTE-IA|CTE1A|MTE1|PTE2|PTE2A|ZAP128,acyl-CoA thioesterase 2,ETC
@@ -607,7 +607,7 @@ LDHD,DLACD|DLD,lactate dehydrogenase D,mitochondria
 MRPL45,L45mt|MRP-L45,mitochondrial ribosomal protein L45,Ribosomal
 C12orf65,COXPD7|SPG55,chromosome 12 open reading frame 65,DNA
 IMMP1L,IMMP1|IMP1|IMP1-LIKE,inner mitochondrial membrane peptidase subunit 1,mitochondria
-POLG,MDP1|MIRAS|MTDPS4A|MTDPS4B|PEO|POLG1|POLGA|SANDO|SCAE,"DNA polymerase gamma, catalytic subunit",DNA
+POLG,MDP1|MIRAS|MTDPS4A|MTDPS4B|PEO|POLG1|POLGA|SANDO|SCAE,DNA polymerase gamma- catalytic subunit,DNA
 ATPAF1,ATP11|ATP11p,ATP synthase mitochondrial F1 complex assembly factor 1,ETC
 BLOC1S1,BLOS1|BORCS1|GCN5L1|MICoA|RT14,biogenesis of lysosomal organelles complex 1 subunit 1,ETC
 ALDH1L2,mtFDH,aldehyde dehydrogenase 1 family member L2,mitochondria
@@ -630,8 +630,8 @@ ACAD11,ACAD-11,acyl-CoA dehydrogenase family member 11,ETC
 C5orf63,YDR286C,chromosome 5 open reading frame 63,DNA
 HOGA1,C10orf65|DHDPS2|DHDPSL|HP3|NPL2,4-hydroxy-2-oxoglutarate aldolase 1,mitochondria
 TTC19,2010204O13Rik|MC3DN2,tetratricopeptide repeat domain 19,ETC
-NGRN,DSC92,"neugrin, neurite outgrowth associated",tRNA
-TCAIM,C3orf23|TOAG-1|TOAG1,"T cell activation inhibitor, mitochondrial",mitochondria
+NGRN,DSC92,neugrin- neurite outgrowth associated,tRNA
+TCAIM,C3orf23|TOAG-1|TOAG1,T cell activation inhibitor- mitochondrial,mitochondria
 GCSH,GCE|NKH,glycine cleavage system protein H,mitochondria
 SIRT5,SIR2L5,sirtuin 5,mitochondria
 GPT2,ALT2|GPT 2|MRT49,glutamic--pyruvic transaminase 2,mitochondria
@@ -653,8 +653,8 @@ FAHD1,C16orf36|YISKL,fumarylacetoacetate hydrolase domain containing 1,mitochond
 MCU,C10orf42|CCDC109A|HsMCU,mitochondrial calcium uniporter,mitochondria
 CYP27A1,CP27|CTX|CYP27,cytochrome P450 family 27 subfamily A member 1,ETC
 MT-ND2,MTND2,MTND2,ETC
-MT-ND4,MTND4,"NADH dehydrogenase, subunit 4 (complex I)",ETC
-MT-ND5,MTND5,"NADH dehydrogenase, subunit 5 (complex I)",ETC
+MT-ND4,MTND4,NADH dehydrogenase- subunit 4 (complex I),ETC
+MT-ND5,MTND5,NADH dehydrogenase- subunit 5 (complex I),ETC
 DELE1,DELE|DELE1(L)|KIAA0141,DAP3 binding cell death enhancer 1,mitochondria
 FASTKD1,-,FAST kinase domains 1,ETC
 MRPS31,IMOGN38|MRP-S31|S31mt,mitochondrial ribosomal protein S31,Ribosomal
@@ -665,7 +665,7 @@ TRIT1,COXPD35|GRO1|IPPT|IPT|IPTase|MOD5|hGRO1,tRNA isopentenyltransferase 1,tRNA
 CRLS1,C20orf155|CLS|CLS1|GCD10|dJ967N21.6,cardiolipin synthase 1,mitochondria
 GLYCTK,HBEBP2|HBEBP4|HBeAgBP4A,glycerate kinase,mitochondria
 SLC25A32,MFT|MFTC|RREI,solute carrier family 25 member 32,mitochondria
-AARS2,AARSL|COXPD8|LKENP|MT-ALARS|MTALARS,"alanyl-tRNA synthetase 2, mitochondrial",tRNA
+AARS2,AARSL|COXPD8|LKENP|MT-ALARS|MTALARS,alanyl-tRNA synthetase 2- mitochondrial,tRNA
 EXOG,ENDOGL1|ENDOGL2|ENGL|ENGL-a|ENGL-b|ENGLA|ENGLB,exo/endonuclease G,mitochondria
 CHCHD2,C7orf17|MIX17B|MNRR1|NS2TP|PARK22,coiled-coil-helix-coiled-coil-helix domain containing 2,mitochondria
 KMO,dJ317G22.1,kynurenine 3-monooxygenase,mitochondria
@@ -673,7 +673,7 @@ SFXN5,BBG-TCC|SLC56A5,sideroflexin 5,mitochondria
 ELAC2,COXPD17|ELC2|HPC2,elaC ribonuclease Z 2,Ribosomal
 GPX1,GPXD|GSHPX1,glutathione peroxidase 1,mitochondria
 CPT1B,CPT1-M|CPT1M|CPTI|CPTI-M|M-CPT1|MCCPT1|MCPT1,carnitine palmitoyltransferase 1B,mitochondria
-FIS1,CGI-135|TTC11,"fission, mitochondrial 1",DNA
+FIS1,CGI-135|TTC11,fission- mitochondrial 1,DNA
 PRELID1,CGI-106|PRELI|PX19|SBBI12,PRELI domain containing 1,mitochondria
 UCP3,SLC25A9,uncoupling protein 3,ETC
 SLC25A27,UCP4,solute carrier family 25 member 27,mitochondria
@@ -696,18 +696,18 @@ ABCD2,ABC39|ALDL1|ALDR|ALDRP|hALDR,ATP binding cassette subfamily D member 2,mit
 FLAD1,FAD1|FADS|LSMFLAD|PP591,flavin adenine dinucleotide synthetase 1,ETC
 LIPT1,LIPT1D,lipoyltransferase 1,mitochondria
 DGLUCY,C14orf159,D-glutamate cyclase,mitochondria
-PCK2,PEPCK|PEPCK-M|PEPCK2,"phosphoenolpyruvate carboxykinase 2, mitochondrial",mitochondria
-NADK2,C5orf33|DECRD|MNADK|NADKD1,"NAD kinase 2, mitochondrial",mitochondria
+PCK2,PEPCK|PEPCK-M|PEPCK2,phosphoenolpyruvate carboxykinase 2- mitochondrial,mitochondria
+NADK2,C5orf33|DECRD|MNADK|NADKD1,NAD kinase 2- mitochondrial,mitochondria
 MPST,MST|TST2|TUM1,mercaptopyruvate sulfurtransferase,mitochondria
 NUDT13,-,nudix hydrolase 13,DNA
 ACACA,ACAC|ACACAD|ACC|ACC1|ACCA,acetyl-CoA carboxylase alpha,ETC
 ABAT,GABA-AT|GABAT|NPD009,4-aminobutyrate aminotransferase,mitochondria
 HMGCS2,-,3-hydroxy-3-methylglutaryl-CoA synthase 2,ETC
 ALDH5A1,SSADH|SSDH,aldehyde dehydrogenase 5 family member A1,mitochondria
-CKMT1A,CKMT1|U-MtCK|mia-CK,"creatine kinase, mitochondrial 1A",mitochondria
+CKMT1A,CKMT1|U-MtCK|mia-CK,creatine kinase- mitochondrial 1A,mitochondria
 PISD,DJ858B16|LIBF|PSD|PSDC|PSSC|dJ858B16.2,phosphatidylserine decarboxylase,ETC
 NDUFB4,B15|CI-B15,NADH:ubiquinone oxidoreductase subunit B4,ETC
-UQCR11,0710008D09Rik|QCR10|UQCR,"ubiquinol-cytochrome c reductase, complex III subunit XI",ETC
+UQCR11,0710008D09Rik|QCR10|UQCR,ubiquinol-cytochrome c reductase- complex III subunit XI,ETC
 FAM136A,-,family with sequence similarity 136 member A,mitochondria
 TOMM5,C9orf105|Tom5|bA613M10.3,translocase of outer mitochondrial membrane 5,mitochondria
 HTRA2,MGCA8|OMI|PARK13|PRSS25,HtrA serine peptidase 2,mitochondria
@@ -727,7 +727,7 @@ PAM16,CGI-136|MAGMAS|SMDMDM|TIM16|TIMM16,presequence translocase associated moto
 ALDH3A2,ALDH10|FALDH|SLS,aldehyde dehydrogenase 3 family member A2,mitochondria
 ACSL6,ACS2|FACL6|LACS 6|LACS2|LACS5,acyl-CoA synthetase long chain family member 6,ETC
 MRS2,HPT|MRS2L,magnesium transporter MRS2,mitochondria
-ABHD10,-,"abhydrolase domain containing 10, depalmitoylase",mitochondria
+ABHD10,-,abhydrolase domain containing 10- depalmitoylase,mitochondria
 HINT3,HINT4,histidine triad nucleotide binding protein 3,mitochondria
 PXMP4,PMP24,peroxisomal membrane protein 4,mitochondria
 OSGEPL1,OSGEPL|Qri7,O-sialoglycoprotein endopeptidase like 1,mitochondria
@@ -753,7 +753,7 @@ MT-CO3,COIII|MTCO3,cytochrome c oxidase III,ETC
 DHRS7B,CGI-93|SDR32C1,dehydrogenase/reductase 7B,DNA
 MTRF1,MRF1|MTTRF1|RF1,mitochondrial translation release factor 1,DNA
 TMEM143,-,transmembrane protein 143,ETC
-NT5M,dNT-2|dNT2|mdN,"5',3'-nucleotidase, mitochondrial",DNA
+NT5M,dNT-2|dNT2|mdN,5'-3'-nucleotidase- mitochondrial,DNA
 RHOT1,ARHT1|MIRO-1|MIRO1,ras homolog family member T1,mitochondria
 NME4,NDPK-D|NM23H4|nm23-H4,NME/NM23 nucleoside diphosphate kinase 4,DNA
 MTHFS,HsT19268|NEDMEHM,methenyltetrahydrofolate synthetase,mitochondria
@@ -769,13 +769,13 @@ GARS1,CMT2D|DSMAV|GARS|GlyRS|HMN5|SMAD1,glycyl-tRNA synthetase 1,tRNA
 ACSM2A,A-923A4.1|ACSM2,acyl-CoA synthetase medium chain family member 2A,ETC
 SLC25A33,BMSC-MCP|PNC1,solute carrier family 25 member 33,mitochondria
 LYRM9,C17orf108|HSD24,LYR motif containing 9,ETC
-RAB24,-,"RAB24, member RAS oncogene family",mitochondria
-PARS2,EIEE75|MT-PRORS|proRS,"prolyl-tRNA synthetase 2, mitochondrial",tRNA
+RAB24,-,RAB24- member RAS oncogene family,mitochondria
+PARS2,EIEE75|MT-PRORS|proRS,prolyl-tRNA synthetase 2- mitochondrial,tRNA
 MRPL52,-,mitochondrial ribosomal protein L52,Ribosomal
 PUS1,MLASA1,pseudouridine synthase 1,mitochondria
 GOT2,KAT4|KATIV|KYAT4|mitAAT,glutamic-oxaloacetic transaminase 2,mitochondria
 NAXD,CARKD|LP3298|PEBEL2,NAD(P)HX dehydratase,ETC
-MT-ND3,MTND3,"NADH dehydrogenase, subunit 3 (complex I)",ETC
+MT-ND3,MTND3,NADH dehydrogenase- subunit 3 (complex I),ETC
 ACCS,ACS|PHACS,1-aminocyclopropane-1-carboxylate synthase homolog (inactive),mitochondria
 PTRH2,BIT1|CFAP37|CGI-147|IMNEPD|PTH|PTH 2|PTH2,peptidyl-tRNA hydrolase 2,tRNA
 PGS1,-,phosphatidylglycerophosphate synthase 1,mitochondria
@@ -792,7 +792,7 @@ COA4,CHCHD8|CMC3|E2IG2,cytochrome c oxidase assembly factor 4 homolog,ETC
 NIF3L1,ALS2CR1|CALS-7|MDS015,NGG1 interacting factor 3 like 1,DNA
 PUSL1,-,pseudouridine synthase like 1,tRNA
 SDSL,SDH 2|SDS-RS1|TDH|cSDH,serine dehydratase like,ETC
-BAX,BCL2L4,"BCL2 associated X, apoptosis regulator",mitochondria
+BAX,BCL2L4,BCL2 associated X- apoptosis regulator,mitochondria
 MAVS,CARDIF|IPS-1|IPS1|VISA,mitochondrial antiviral signaling protein,DNA
 METTL17,METT11D1,methyltransferase like 17,Ribosomal
 ACACB,ACC2|ACCB|HACC275,acetyl-CoA carboxylase beta,ETC
@@ -807,7 +807,7 @@ NSUN4,SHTAP,NOP2/Sun RNA methyltransferase 4,DNA
 ACSS3,-,acyl-CoA synthetase short chain family member 3,DNA
 FAM210B,5A3|C20orf108|dJ1167H4.1,family with sequence similarity 210 member B,mitochondria
 RBFA,C18orf22|HsT169,ribosome binding factor A,Ribosomal
-METAP1D,MAP 1D|MAP1D|MetAP 1D|Metap1l,"methionyl aminopeptidase type 1D, mitochondrial",mitochondria
+METAP1D,MAP 1D|MAP1D|MetAP 1D|Metap1l,methionyl aminopeptidase type 1D- mitochondrial,mitochondria
 AHCYL1,DCAL|IRBIT|PPP1R78|PRO0233|XPVKONA,adenosylhomocysteinase like 1,mitochondria
 NIPSNAP3A,HSPC299|NIPSNAP4|TASSC,nipsnap homolog 3A,ETC
 MTARC1,MARC1|MOSC1,mitochondrial amidoxime reducing component 1,mitochondria
@@ -820,7 +820,7 @@ MTERF4,MTERFD2,mitochondrial transcription termination factor 4,DNA
 NUDT19,RP2,nudix hydrolase 19,DNA
 HEBP1,HBP|HEBP,heme binding protein 1,mitochondria
 PTPMT1,DUSP23|MOSP|PLIP|PNAS-129,protein tyrosine phosphatase mitochondrial 1,mitochondria
-PGAM5,BXLBV68,"PGAM family member 5, mitochondrial serine/threonine protein phosphatase",mitochondria
+PGAM5,BXLBV68,PGAM family member 5- mitochondrial serine/threonine protein phosphatase,mitochondria
 DTYMK,CDC8|PP3731|TMPK|TYMK,deoxythymidylate kinase,mitochondria
 KARS1,CMTRIB|DFNB89|KARS|KARS2|KRS,lysyl-tRNA synthetase 1,tRNA
 STAR,STARD1,steroidogenic acute regulatory protein,mitochondria
@@ -841,9 +841,9 @@ FTMT,MTF,ferritin mitochondrial,mitochondria
 LDHAL6B,LDH6B|LDHAL6|LDHL,lactate dehydrogenase A like 6B,mitochondria
 MTFR1,CHPPR|FAM54A2,mitochondrial fission regulator 1,DNA
 BCL2L13,BCL-RAMBO|Bcl2-L-13|MIL1,BCL2 like 13,mitochondria
-TRMT10C,COXPD30|HNYA|MRPP1|RG9MTD1,"tRNA methyltransferase 10C, mitochondrial RNase P subunit",tRNA
+TRMT10C,COXPD30|HNYA|MRPP1|RG9MTD1,tRNA methyltransferase 10C- mitochondrial RNase P subunit,tRNA
 ACOT7,ACH1|ACT|BACH|CTE-II|LACH|LACH1|hBACH,acyl-CoA thioesterase 7,ETC
-TFB1M,CGI-75|CGI75|mtTFB|mtTFB1,"transcription factor B1, mitochondrial",DNA
+TFB1M,CGI-75|CGI75|mtTFB|mtTFB1,transcription factor B1- mitochondrial,DNA
 ARF5,-,ADP ribosylation factor 5,mitochondria
 MCUB,CCDC109B,mitochondrial calcium uniporter dominant negative subunit beta,ETC
 TWNK,ATXN8|C10orf2|IOSCA|MTDPS7|PEO|PEO1|PEOA3|PRLTS5|SANDO|SCA8|TWINL,twinkle mtDNA helicase,DNA
@@ -895,9 +895,9 @@ PEX11B,PEX11-BETA|PEX14B,peroxisomal biogenesis factor 11 beta,mitochondria
 TMEM186,C16orf51,transmembrane protein 186,ETC
 PIF1,C15orf20|PIF,PIF1 5'-to-3' DNA helicase,DNA
 FABP1,FABPL|L-FABP,fatty acid binding protein 1,mitochondria
-ABCD1,ABC42|ALD|ALDP|AMN,ATP binding cassette subfamily D member 1,mitochondrial
+ABCD1,ABC42|ALD|ALDP|AMN,ATP binding cassette subfamily D member 1,mitochondria
 PLPBP,EPVB6D|PROSC,pyridoxal phosphate binding protein,mitochondria
-DBI,ACBD1|ACBP|CCK-RP|EP,"diazepam binding inhibitor, acyl-CoA binding protein",ETC
+DBI,ACBD1|ACBP|CCK-RP|EP,diazepam binding inhibitor- acyl-CoA binding protein,ETC
 PNPT1,COXPD13|DFNB70|OLD35|PNPASE|old-35,polyribonucleotide nucleotidyltransferase 1,Ribosomal
 TOP1MT,-,DNA topoisomerase I mitochondrial,DNA
 RNASEH1,H1RNA|PEOB2|RNH1,ribonuclease H1,Ribosomal
@@ -927,7 +927,7 @@ BAK1,BAK|BAK-LIKE|BCL2L7|CDN1,BCL2 antagonist/killer 1,mitochondria
 DHODH,DHOdehase|POADS|URA1,dihydroorotate dehydrogenase (quinone),ETC
 MAOB,-,monoamine oxidase B,mitochondria
 MGST3,GST-III,microsomal glutathione S-transferase 3,mitochondria
-ACP6,ACPL1|LPAP|PACPL1,"acid phosphatase 6, lysophosphatidic",mitochondria
+ACP6,ACPL1|LPAP|PACPL1,acid phosphatase 6- lysophosphatidic,mitochondria
 MRPL48,CGI-118|HSPC290|L48MT|MRP-L48,mitochondrial ribosomal protein L48,Ribosomal
 AGXT,AGT|AGT1|AGXT1|PH1|SPAT|SPT|TLH6,alanine--glyoxylate and serine--pyruvate aminotransferase,mitochondria
 CYB5R3,B5R|DIA1,cytochrome b5 reductase 3,ETC
@@ -949,10 +949,10 @@ FKBP8,FKBP38|FKBPr38,FKBP prolyl isomerase 8,mitochondria
 ACSM4,-,acyl-CoA synthetase medium chain family member 4,mitochondria
 NLRX1,CLR11.3|DLNB26|NOD26|NOD5|NOD9,NLR family member X1,mitochondria
 FOXRED1,FP634|H17|MC1DN19,FAD dependent oxidoreductase domain containing 1,ETC
-TFB2M,Hkp1|mtTFB2,"transcription factor B2, mitochondrial",DNA
-PPM1K,BDP|MSUDMV|PP2Ckappa|PP2Cm|PTMP|UG0882E07,"protein phosphatase, Mg2+/Mn2+ dependent 1K",mitochondria
+TFB2M,Hkp1|mtTFB2,transcription factor B2- mitochondrial,DNA
+PPM1K,BDP|MSUDMV|PP2Ckappa|PP2Cm|PTMP|UG0882E07,protein phosphatase- Mg2+/Mn2+ dependent 1K,mitochondria
 ATP5MC2,ATP5A|ATP5G2,ATP synthase membrane subunit c locus 2,ETC
-MT-ND1,MTND1,"NADH dehydrogenase, subunit 1 (complex I)",ETC
+MT-ND1,MTND1,NADH dehydrogenase- subunit 1 (complex I),ETC
 TAZ,BTHS|CMD3A|EFE|EFE2|G4.5|LVNCX|Taz1,tafazzin,mitochondria
 MSRB3,DFNB74,methionine sulfoxide reductase B3,mitochondria
 ACOT11,BFIT|STARD14|THEA|THEM1,acyl-CoA thioesterase 11,ETC
@@ -969,7 +969,7 @@ QTRT1,FP3235|TGT|TGUT,queuine tRNA-ribosyltransferase catalytic subunit 1,tRNA
 AIFM2,AMID|FSP1|PRG3,apoptosis inducing factor mitochondria associated 2,ETC
 PRDX2,HEL-S-2a|NKEF-B|NKEFB|PRP|PRX2|PRXII|PTX1|TDPX1|TPX1|TSA,peroxiredoxin 2,mitochondria
 FBXL4,FBL4|FBL5|MTDPS13,F-box and leucine rich repeat protein 4,mitochondria
-GPAM,GPAT|GPAT1,"glycerol-3-phosphate acyltransferase, mitochondrial",mitochondria
+GPAM,GPAT|GPAT1,glycerol-3-phosphate acyltransferase- mitochondrial,mitochondria
 DMAC2L,ATP5S|ATPW|FB|HSU79253,distal membrane arm assembly complex 2 like,ETC
 RMDN3,FAM82A2|FAM82C|RMD-3|RMD3|ptpip51,regulator of microtubule dynamics 3,mitochondria
 PRXL2A,Adrx|C10orf58|FAM213A|PAMM,peroxiredoxin like 2A,mitochondria
@@ -982,7 +982,7 @@ BCO2,B-DIOX-II|BCDO2,beta-carotene oxygenase 2,mitochondria
 IFI27,FAM14D|ISG12|ISG12A|P27,interferon alpha inducible protein 27,DNA
 CRYZ,-,crystallin zeta,mitochondria
 PYCR1,ARCL2B|ARCL3B|P5C|P5CR|PIG45|PP222|PRO3|PYCR,pyrroline-5-carboxylate reductase 1,mitochondria
-TMLHE,AUTSX6|BBOX2|TMLD|TMLH|TMLHED|XAP130,"trimethyllysine hydroxylase, epsilon",mitochondria
+TMLHE,AUTSX6|BBOX2|TMLD|TMLH|TMLHED|XAP130,trimethyllysine hydroxylase- epsilon,mitochondria
 TOMM20,MAS20|MOM19|TOM20,translocase of outer mitochondrial membrane 20,mitochondria
 YRDC,DRIP3|IRIP|SUA5,yrdC N6-threonylcarbamoyltransferase domain containing,tRNA
 COA7,C1orf163|RESA1|SCAN3|SELRC1,cytochrome c oxidase assembly factor 7 (putative),ETC
@@ -996,7 +996,7 @@ FASTKD5,dJ1187M17.5,FAST kinase domains 5,ETC
 PARK7,DJ-1|DJ1|GATD2|HEL-S-67p,Parkinsonism associated deglycase,mitochondria
 COA1,C7orf44|MITRAC15,cytochrome c oxidase assembly factor 1 homolog,ETC
 COX7B2,-,cytochrome c oxidase subunit 7B2,ETC
-MT-ND4L,MTND4L,"NADH dehydrogenase, subunit 4L (complex I)",ETC
+MT-ND4L,MTND4L,NADH dehydrogenase- subunit 4L (complex I),ETC
 SIRT4,SIR2L4,sirtuin 4,mitochondria
 UQCC2,C6orf125|C6orf126|Cbp6|M19|MC3DN7|MNF1|bA6B20.2,ubiquinol-cytochrome c reductase complex assembly factor 2,ETC
 USP30,-,ubiquitin specific peptidase 30,ETC
@@ -1036,7 +1036,7 @@ PMAIP1,APR|NOXA,phorbol-12-myristate-13-acetate-induced protein 1,mitochondria
 TDRKH,TDRD2,tudor and KH domain containing,mitochondria
 SLC8B1,NCKX6|NCLX|SLC24A6,solute carrier family 8 member B1,mitochondria
 CYP27B1,CP2B|CYP1|CYP1alpha|CYP27B|P450c1|PDDR|VDD1|VDDR|VDDRI|VDR,cytochrome P450 family 27 subfamily B member 1,ETC
-POLG2,HP55|MTDPS16|MTPOLB|PEOA4|POLB|POLG-BETA|POLGB,"DNA polymerase gamma 2, accessory subunit",DNA
+POLG2,HP55|MTDPS16|MTPOLB|PEOA4|POLB|POLG-BETA|POLGB,DNA polymerase gamma 2- accessory subunit,DNA
 THEM5,ACOT15,thioesterase superfamily member 5,mitochondria
 BIK,BIP1|BP4|NBK,BCL2 interacting killer,mitochondria
 MTERF1,MTERF,mitochondrial transcription termination factor 1,DNA
@@ -1062,13 +1062,13 @@ ATPSCKMT,FAM173B|JS-2|hFAM173B,ATP synthase c subunit lysine N-methyltransferase
 NEU4,-,neuraminidase 4,mitochondria
 CASP9,APAF-3|APAF3|ICE-LAP6|MCH6|PPP1R56,caspase 9,mitochondria
 AGK,CATC5|CTRCT38|MTDPS10|MULK,acylglycerol kinase,mitochondria
-MCL1,BCL2L3|EAT|MCL1-ES|MCL1L|MCL1S|Mcl-1|TM|bcl2-L-3|mcl1/EAT,"MCL1 apoptosis regulator, BCL2 family member",mitochondria
+MCL1,BCL2L3|EAT|MCL1-ES|MCL1L|MCL1S|Mcl-1|TM|bcl2-L-3|mcl1/EAT,MCL1 apoptosis regulator- BCL2 family member,mitochondria
 DUS2,DUS2L|SMM1|URLC8,dihydrouridine synthase 2,tRNA
 PLD6,ZUC,phospholipase D family member 6,mitochondria
 TOMM34,HTOM34P|TOM34|URCC3,translocase of outer mitochondrial membrane 34,mitochondria
 PRORP,KIAA0391|MRPP3,protein only RNase P catalytic subunit,tRNA
 PLSCR3,-,phospholipid scramblase 3,mitochondria
-CKMT1B,CKMT|CKMT1|UMTCK,"creatine kinase, mitochondrial 1B",mitochondria
+CKMT1B,CKMT|CKMT1|UMTCK,creatine kinase- mitochondrial 1B,mitochondria
 NDUFB1,CI-MNLL|CI-SGDH|MNLL,NADH:ubiquinone oxidoreductase subunit B1,ETC
 ATP5MF-PTCD1,ATP5J2-PTCD1,ATP5MF-PTCD1 readthrough,ETC
 CASP8,ALPS2B|CAP4|Casp-8|FLICE|MACH|MCH5,caspase 8,mitochondria
@@ -1081,7 +1081,7 @@ GOLPH3,GOPP1|GPP34|MIDAS|Vps74,golgi phosphoprotein 3,mitochondria
 PREPL,CMS22,prolyl endopeptidase like,mitochondria
 FASTKD3,-,FAST kinase domains 3,ETC
 CEP89,CCDC123|CEP123,centrosomal protein 89,ETC
-GPAT2,CT123,"glycerol-3-phosphate acyltransferase 2, mitochondrial",mitochondria
+GPAT2,CT123,glycerol-3-phosphate acyltransferase 2- mitochondrial,mitochondria
 NBR1,1A1-3B|IAI3B|M17S2|MIG19,NBR1 autophagy cargo receptor,ETC
 BOK,BCL2L9|BOKL,BCL2 family apoptosis regulator BOK,mitochondria
 FKBP10,BRKS1|FKBP65|OI11|OI6|PPIASE|hFKBP65,FKBP prolyl isomerase 10,mitochondria
@@ -1098,9 +1098,9 @@ BCL2L2,BCL-W|BCL2-L-2|BCLW|PPP1R51,BCL2 like 2,mitochondria
 CASP3,CPP32|CPP32B|SCA-1,caspase 3,mitochondria
 DMPK,DM|DM1|DM1PK|DMK|MDPK|MT-PK,DM1 protein kinase,mitochondria
 DNA2,DNA2L|hDNA2,DNA replication helicase/nuclease 2,DNA
-MT-ND6,MTND6,"NADH dehydrogenase, subunit 6 (complex I)",ETC
+MT-ND6,MTND6,NADH dehydrogenase- subunit 6 (complex I),ETC
 PRKN,AR-JP|LPRS2|PARK2|PDJ,parkin RBR E3 ubiquitin protein ligase,mitochondria
-ALKBH1,ABH|ABH1|ALKBH|alkB|hABH,"alkB homolog 1, histone H2A dioxygenase",DNA
+ALKBH1,ABH|ABH1|ALKBH|alkB|hABH,alkB homolog 1- histone H2A dioxygenase,DNA
 PICK1,PICK|PRKCABP,protein interacting with PRKCA 1,mitochondria
 BCL2L10,BCL-B|Boo|Diva|bcl2-L-10,BCL2 like 10,mitochondria
 AKAP10,AKAP-10|D-AKAP-2|D-AKAP2|PRKA10,A-kinase anchoring protein 10,mitochondria
@@ -1129,7 +1129,7 @@ SNAP29,CEDNIK|SNAP-29,synaptosome associated protein 29,mitochondria
 ARMCX3,ALEX3|GASP6|dJ545K15.2,armadillo repeat containing X-linked 3,DNA
 ARMCX6,GASP10,armadillo repeat containing X-linked 6,DNA
 METTL4,HsT661,methyltransferase like 4,mitochondria
-SPHKAP,SKIP,"SPHK1 interactor, AKAP domain containing",mitochondria
+SPHKAP,SKIP,SPHK1 interactor- AKAP domain containing,mitochondria
 NAT8L,CML3|NACED|NAT8-LIKE,N-acetyltransferase 8 like,mitochondria
 MCCD1,-,mitochondrial coiled-coil domain 1,mitochondria
 PIGBOS1,HP06981,PIGB opposite strand 1,mitochondria

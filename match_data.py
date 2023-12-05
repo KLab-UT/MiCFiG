@@ -19,7 +19,6 @@ def Hits_List(log_file):
                 #get rid of everything but the term
                 new_line = line.split('|')
                 hits.append(new_line[1].strip('_HUMAN\n'))
-                print(hits)
         return hits
 
 def Mk_Dict(mito):
@@ -46,7 +45,8 @@ def Mk_Dict(mito):
         new_dict[symbol] = category
         each = synonym.split('|')
         for term in each:
-            new_dict[term] = category
+            if term != '-':
+                new_dict[term] = category
     return new_dict
 
 def Mtch_Dict(hits, new_dict):
@@ -64,7 +64,7 @@ def Mtch_Dict(hits, new_dict):
     matches = {}
     for item in hits:
         for key, value in new_dict.items():
-            if item == key:
+            if key in item:
                 matches[key] = value
     return matches
 
@@ -82,7 +82,7 @@ def Category_Count(dictionary):
     ribosome_count = 0
     mitochondria_count = 0
     trna_count = 0
-    for key, value in dictionary.items():
+    for value in dictionary.values():
         #determine which category the term is in and add to the count
         if value == 'ETC':
             etc_count += 1
@@ -100,19 +100,20 @@ if  __name__ == "__main__":
             hit = Hits_List(log)
             new = Mk_Dict(mito)
             matches = Mtch_Dict(hit, new)
-            print(len(matches))
             match_count = Category_Count(matches)
             overall_count = Category_Count(new)
             r = np.arange(4)
             width = 0.25
             plt.bar(r, overall_count, color = 'b', width = width, label = 'All NMT Genes')
-            plt.bar(r + width, [105, 4, 158, 15], color = 'g', width = width, label = 'Matched NMT Genes')
+            plt.bar(r + width, match_count, color = 'g', width = width, label = 'Matched NMT Genes')
             plt.xlabel('Category')
             plt.ylabel('Value')
             plt.title('NMT Gene Categories All vs. Matched')
             plt.xticks(r + width/2, ['ETC', 'Ribosome', 'Mitochondria','tRNA'])
             plt.legend()
             plt.show()
+            plt.savefig('my_fig.png')
+
 
 
 
