@@ -70,9 +70,10 @@ def Find_Matches(terms_list, gff, out, log_out):
     '''
     This function takes an input of the terms_list (from Create_Search_Terms),
     the .gff file with the genes to be sorted through, the output file to write
-    the sorted genes to.
+    the sorted genes to, and the log file to write the log of matches to.
 
-    It outputs the output file with the sorted genes.
+    It outputs the output file with the sorted genes and a log file detailing
+    what term matched which gene in the gff file.
 
     '''
     for line in gff:
