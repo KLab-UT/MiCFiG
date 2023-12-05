@@ -30,13 +30,13 @@ As a first step in this project, we will be determining whether the parental spe
 
 Clone the repository by copying the following code and entering it into the command line:
 
-   `git clone https://github.com/KLab-UT/BAM_comparative_genetics.git'
+   `$ git clone https://github.com/KLab-UT/BAM_comparative_genetics.git`
 
 
 
 ## Walkthrough 1
 
-Starting with the best annotated genome, 'a_marmoratus_AspMarm2.0_v1.gff', we will sort out all of the NMT genes using the file, 'Human.MitoCarta3.0.csv'. This file contains all of the human NMT genes with all of their symbol names. These names will be used to sort through the gff file and pull out any of the *Amlops marmoratus* genes which have the same symbol name. 
+Starting with the best annotated genome, `a_marmoratus_AspMarm2.0_v1.gff`, we will sort out all of the NMT genes using the file, 'Human.MitoCarta3.0.csv'. This file contains all of the human NMT genes with all of their symbol names. These names will be used to sort through the gff file and pull out any of the *Amlops marmoratus* genes which have the same symbol name. 
 
 To do this, after cloning the 
 
