@@ -1,5 +1,5 @@
 # whiptail_nmt_variation
-Python and bash scripts used to examine the amount of genetic variation in nuclear-encoded mitochondrial-targetting (NMT) genes between sexual species of whiptail lizards (genus Aspidoscelis) using whole-genome sequencing data.
+A total of 12 files were used where two were Python and ten were bash scripts to examine the amount of genetic variation in nuclear-encoded mitochondrial-targetting (NMT) genes between sexual species of whiptail lizards (genus Aspidoscelis) using whole-genome sequencing data.
 
 # Contents
 
