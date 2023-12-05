@@ -1,32 +1,43 @@
 # whiptail_nmt_variation
-Scripts used to examine the amount of genetic variation in nuclear-encoded mitochondrial-targetting (NucMt) genes between sexual species of whiptail lizards (genus Aspidoscelis) using whole-genome sequencing data.
+Scripts used to examine the amount of genetic variation in nuclear-encoded mitochondrial-targetting (NMT) genes between sexual species of whiptail lizards (genus Aspidoscelis) using whole-genome sequencing data.
 
 # Contents
 
-- [Background](#background)
+- [Abstract](#abstract)
 - [Hypothesis](#hypothesis)
 - [Methods](#methods)
+  - [Walkthrough 1](#walkthrough1)
+- [Scripts](#scripts)
 
-## Background
+# Abstract
 
+ Hybrid parthenogenic whiptail species have lower endurance capacity and mitochondrial respiration than their sexual parental species. These differences in aerobic performance may be due to reduced compatibility of variable gene products between the divergent parental genomes that are present in the hybrids. If this is the case, we expect to see genetic variation in mitochondrial-targetting genes. We performed whole-genome sequencing for four sexual whiptail species that are parental species to hybrid parthenogenetic species, and we mapped those samples to an annotated whiptail genome. We call gene variants and classify them as coding, non-coding, synonymous, and non-synonymous to understand which variants might contribute to phenotypic variation, and we discuss approaches to further elucidate the genetic mechanism behind the lower aerobic performance in hybrid parthenogens.
 
-Parthenogenetic whiptail lizards have been shown to have lower endurance capacity 
-([Cullum, 1997](https://www.journals.uchicago.edu/doi/abs/10.1086/286055?casa_token=q8DOEvxRkccAAAAA:nmq4l99bzJ7XY8vxokdkj0eRg6816F4_zQ9VSFx7sstxB_qBfty9GAPVe1uUGPgpuMU7CZL4ySIZ); [Klabacka et al., 2022](https://www.journals.uchicago.edu/doi/full/10.1086/719014?casa_token=_E1ccM7e3WkAAAAA%3A1JC_ft2sxeGGwmoiBGjjWNGuLMJX-gXpmfMZsWbjXGbXV4iFVCKvK1R8vbg92gTPLfhYSnbAPYNt))
- and mitochondrial respiration ([Klabacka et al., 2022](https://www.journals.uchicago.edu/doi/full/10.1086/719014?casa_token=_E1ccM7e3WkAAAAA%3A1JC_ft2sxeGGwmoiBGjjWNGuLMJX-gXpmfMZsWbjXGbXV4iFVCKvK1R8vbg92gTPLfhYSnbAPYNt)) compared to closely related sexual species. 
-
-## Hypothesis
-We hypothesize that lower endurance and mitochondrial respiration in these lizards is a result of reduced genetic compatibility in Nuc-Mt\* genes due to either 
+# Hypothesis
+We hypothesize that lower endurance and mitochondrial respiration in these lizards is a result of reduced genetic compatibility in NMT genes due to either 
 (A) inter-genomic interactions or (B) intra-genomic interactions. 
 - Inter- and intra- prefixes are in reference to the parental genomes of the parthenogenetic whiptails, which are of hybrid origin (i.e., the crossing of two divergent species resulted in the new evolutionary lineage of the parthenogenetic species).
   - Inter-genomic refers to interactions between parental genomes (between gene products of maternal ancestry and gene products of paternal ancestry).
   - Intra-genomic refers to interactions within a parental genome (e.g., between nuclear gene products of maternal ancestry and mitochondrial gene products of maternal ancestry). 
 
-Examining the Nuc-Mt genetic variability between the sexual parental species provides a base for testing the inter-genomic hypothesis: If we find variation in Nuc-Mt genes between hybridizing species, this variation is likely present in the 
+Examining the NMT genetic variability between the sexual parental species provides a base for testing the inter-genomic hypothesis: If we find variation in NMT genes between hybridizing species, this variation is likely present in the 
  "frozen"\*\* 
  genomes 
-of the parthenogenetic species. If no variation is present in Nuc-Mt genes between hybridizing species, then a source other than reduced compatibility between the divergent genomes is responsible for the reduced performance in parthenogens (e.g., intra-genomic interactions). 
+of the parthenogenetic species. If no variation is present in NMT genes between hybridizing species, then a source other than reduced compatibility between the divergent genomes is responsible for the reduced performance in parthenogens (e.g., intra-genomic interactions). 
 
-## Methods
-As a first step in this project, we will simply be examining which reference genome is the best to map to. We will make quantitative comparisons to 6 annottated reference genomes: The common wall lizard (*Podarcis muralis*), the aeolian wall lizard (*Podarcis raffonei*), the sand lizard (*Lacerta agilis*), the false girdled lizard (*Hemicordylus capensis*), the eastern fence lizard (*Sceloporus undulatus*), and the Burmese python (*Python bivittatus*).
+# Methods
+As a first step in this project, we will be determining whether the parental species have differences in their NMT genes. To do this we first need to determine which genes are NMT genes. 
 
----
+Clone the repository by copying the following code and entering it into the command line:
+
+   git clone https://github.com/KLab-UT/BAM_comparative_genetics.git
+
+
+
+## Walkthrough 1
+
+Starting with the best annotated genome, 'a_marmoratus_AspMarm2.0_v1.gff', we will sort out all of the NMT genes using the file, 'Human.MitoCarta3.0.csv'. This file contains all of the human NMT genes with all of their symbol names. These names will be used to sort through the gff file and pull out any of the *Amlops marmoratus* genes which have the same symbol name. 
+
+To do this, after cloning the 
+
+
