@@ -31,7 +31,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--mito_carta_file", '-m', help="Mitochondrial DNA CSV file")
 parser.add_argument("--gff_file_in", "-g", help="Input gff file")
 parser.add_argument("--gff_file_out", "-o", default="output.gff", help="Output gff file")
-parser.add_argument("--log_file", "-l", default="log.txt", help="Log to keep track of the matches in the genes")
+parser.add_argument("--log_file", "-l", default="log_file.txt", help="Log to keep track of the matches in the genes")
 
 args = parser.parse_args()
 
@@ -66,7 +66,7 @@ def Create_Search_Terms(mito):
         #formats all of the terms correctly for better search accuracy
     return terms_list
 
-def Find_Matches(terms_list, gff, out):
+def Find_Matches(terms_list, gff, out, log_out):
     '''
     This function takes an input of the terms_list (from Create_Search_Terms),
     the .gff file with the genes to be sorted through, the output file to write
@@ -83,29 +83,8 @@ def Find_Matches(terms_list, gff, out):
                     #if the term is there the line must be a gene not an exon or transcript
                     #this avoids duplications
                     print(line.strip(), file = out)
-                    #writes to the output gff file
-    return
-
-def Create_Log_File(terms_list, gff, log):
-    '''
-    This function takes an input of the terms_list (from Create_Search_Terms),
-    the .gff file with the genes to be sorted through, the log file to print
-    the matched genes to.
-
-    It outputs the log file where the keyword that was matched to the gene
-    precedes the gene that was matched.
-
-    '''
-    for line in gff:
-        for term in terms_list:
-            if term in line:
-                #checks if the term in terms_list is in the gff file line
-                if line.split('\t')[2] == 'gene':
-                    #if the term is there the line must be a gene not an exon or transcript
-                    #this avoids duplications
-                    #print('HIT:\n\tterm:' + term + '\n\tgff:' + line, file=log)
-                    log.write('HIT:\n\tterm:' + term + '\n\tgff:' + line)
-                    #writes to the log file
+                    print('HIT:\n\tterm: ' + term + '\n\tgff: ' + line, file=log_out)
+                    #writes to the output gff file and log file
     return
 
 
@@ -122,8 +101,7 @@ def main():
             with open(out, "w") as gff_out:
                 with open(log, "w") as log_out:
                     terms = Create_Search_Terms(mito_terms)
-                    Find_Matches(terms, gff_in, gff_out)
-                    Create_Log_File(terms, gff_in, log_out)
+                    Find_Matches(terms, gff_in, gff_out, log_out)
     return
 
 if __name__ == "__main__":
