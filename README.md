@@ -26,11 +26,11 @@ Examining the NMT genetic variability between the sexual parental species provid
 of the parthenogenetic species. If no variation is present in NMT genes between hybridizing species, then a source other than reduced compatibility between the divergent genomes is responsible for the reduced performance in parthenogens (e.g., intra-genomic interactions). 
 
 # Methods
-As a first step in this project, we will be determining whether the parental species have differences in their NMT genes. To do this we first need to determine which genes are NMT genes. 
+As a first step in this project, we will be determining whether the parental species have differences in their NMT genes, to determine if there are inter-genomic interactions. To do this we first need to determine which genes are NMT genes. 
 
 Clone the repository by copying the following code and entering it into the command line:
 
-   git clone https://github.com/KLab-UT/BAM_comparative_genetics.git
+   `git clone https://github.com/KLab-UT/BAM_comparative_genetics.git'
 
 
 
