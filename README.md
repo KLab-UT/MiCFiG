@@ -30,7 +30,9 @@ As a first step in this project, we will be determining whether the parental spe
 
 Clone the repository by copying the following code and entering it into the command line:
 
-   ```git clone https://github.com/KLab-UT/BAM_comparative_genetics.git```
+```
+   git clone https://github.com/KLab-UT/BAM_comparative_genetics.git
+```
 
 
 
