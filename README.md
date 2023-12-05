@@ -6,8 +6,8 @@ Scripts used to examine the amount of genetic variation in nuclear-encoded mitoc
 - [Abstract](#abstract)
 - [Hypothesis](#hypothesis)
 - [Methods](#methods)
-  - [Walkthrough 1](#walkthrough1)
-  - [Walkthrough 2](#walkthrough2)
+  - [Walkthrough 1](#walkthrough-1)
+  - [Walkthrough 2](#walkthrough-2)
   - [Pipeline](#pipeline)
 - [Next Steps](#nextsteps)
 
@@ -37,7 +37,7 @@ Once you have cloned the repository 'cd' into it and we can get started.
 
 
 
-## Walkthrough 1
+## Walkthrough-1
 
 Starting with the best annotated genome, `a_marmoratus_AspMarm2.0_v1.gff`, we will sort out all of the NMT genes using the file, `Human.MitoCarta3.0.csv`. This file contains all of the human NMT genes with all of their symbol names. These names will be used to sort through the gff file and pull out any of the *Amlops marmoratus* genes which have the same symbol name. 
 
@@ -71,7 +71,7 @@ The log file showing which terms hit which gene:
 
 Once the desired output is obtained we can move on to the next script to obtain some data about the sorted genes. 
 
-## Walkthrough 2
+## Walkthrough-2
 
 Starting with the `Human.MitoCarta3.0.csv` file again and the `log_file.txt` (or whatever you named your log file) we will create a bar plot to represent how many hits we got in each category of gene. All of the genes in the `Human.MitoCarta3.0.csv` file were sorted into each of the four categories: 'ETC', 'Ribosomal', 'Mitochondria', and 'tRNA'. 
 
@@ -100,7 +100,7 @@ Once we have the desired output we can move on to big picture tying in the rest 
 
 The bash files that are in the repository go through mapping the other genomes of the parents. Let's use the figure to help us walkthrough what is happening.
 
-![alt text](NMTPipeline.PNG "dBar Plot of Figure Data")
+![alt text](NMTPipline.PNG "dBar Plot of Figure Data")
 
 # Next Steps
 
