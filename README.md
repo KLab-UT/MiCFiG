@@ -7,7 +7,9 @@ Scripts used to examine the amount of genetic variation in nuclear-encoded mitoc
 - [Hypothesis](#hypothesis)
 - [Methods](#methods)
   - [Walkthrough 1](#walkthrough1)
-- [Scripts](#scripts)
+  - [Walkthrough 2](#walkthrough2)
+  - [Pipeline](#pipeline)
+- [Next Steps](#nextsteps)
 
 # Abstract
 
@@ -40,7 +42,7 @@ Once you have cloned the repository 'cd' into it and we can get started.
 
 ## Walkthrough 1
 
-Starting with the best annotated genome, `a_marmoratus_AspMarm2.0_v1.gff`, we will sort out all of the NMT genes using the file, 'Human.MitoCarta3.0.csv'. This file contains all of the human NMT genes with all of their symbol names. These names will be used to sort through the gff file and pull out any of the *Amlops marmoratus* genes which have the same symbol name. 
+Starting with the best annotated genome, `a_marmoratus_AspMarm2.0_v1.gff`, we will sort out all of the NMT genes using the file, `Human.MitoCarta3.0.csv`. This file contains all of the human NMT genes with all of their symbol names. These names will be used to sort through the gff file and pull out any of the *Amlops marmoratus* genes which have the same symbol name. 
 
 To do this we will use `gff_mito_scan.py`. Copy the following and paste it into the command line so we can understand the file and what is required. 
 
@@ -69,4 +71,44 @@ The sorted NMT genes in a gff file:
 The log file showing which terms hit which gene:
 
 ![alt text](Log.png "Log File with hits")
+
+Once the desired output is obtained we can move on to the next script to obtain some data about the sorted genes. 
+
+## Walkthrough 2
+
+Starting with the `Human.MitoCarta3.0.csv` file again and the `log_file.txt` (or whatever you named your log file) we will create a bar plot to represent how many hits we got in each category of gene. All of the genes in the `Human.MitoCarta3.0.csv` file were sorted into each of the four categories: 'ETC', 'Ribosomal', 'Mitochondria', and 'tRNA'. 
+
+In the file `match_data.py` we will sort the matched genes and plot them on a bar graph. Copy the following and paste it into the command line so we can understand the file and what is required. 
+
+  ```
+    vim match_data.py
+  ```
+
+Now that we understand what we will need to run the file, lets copy the following code and paste it into the command line to sort through the gff file and produce our log file. 
+
+  ```
+    python match_data.py Human.MitoCarta3.0.csv log_file.txt
+  ```
+
+The desired output should resemble the following.
+
+The bar plot:
+
+![alt text](my_fig.png "dBar Plot of Figure Data")
+
+Once we have the desired output we can move on to big picture tying in the rest of the code.
+
+
+## Pipeline
+
+The bash files that are in the repository go through mapping the other genomes of the parents. Let's use the figure to help us walkthrough what is happening.
+
+![alt text](NMTPipeline.PNG "dBar Plot of Figure Data")
+
+# Next Steps
+
+Moving forward the next steps will be to sort the mapped genes with the NMT genes pulled out in the output.gff file. This will pull out only the NMT genes from the mapped genes. From here we will need to quantify the difference in the genes between the parents. If there is significant difference we can assume that inter-genome interaction points to the decreased endurance and mitochondrial respiration in parthenogenic lizard species. If not, we will need to look into intra-genome interaction causing the differences. 
+
+
+
 
