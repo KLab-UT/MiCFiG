@@ -2,6 +2,18 @@ import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
+'''
+This script functions to compile data from the mito carta file and the matched
+genes and display them in a graph
+
+It uses sys.argv for passing through arguments
+
+sys.argv[0] should be the name of the function
+sys.argv[1] should be the name of the mitocarta file
+sys.argv[2] shoul be the name of the log file created in gff_mito_scan.py
+
+'''
+
 def Hits_List(log_file):
         '''
         creates a list of all of the terms that hit a gene in the gff file
