@@ -65,7 +65,7 @@ get_variants() {
 # -o is output
 # -f fasta reference file
 	# bcftools mpileup -Ob -o <study.bcf> -f <ref.fa> <sample1.bam>
-	bcftool mpileup -Ob -o ${output}/${name}.bcf > -f ${reference} ${name}_combined.bam
+	bcftools mpileup -Ob -o ${output}/${name}.bcf > -f ${reference} ${name}_combined.bam
 # -v = vatriants only
 # -m = mark sites
 # -Oz = compressed VCF
