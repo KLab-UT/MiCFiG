@@ -11,6 +11,7 @@
 
 # create working environment
 wd=/scratch/general/nfs1/utu_4310/whiptail_nmt_variation_data
+raw_reads_dir=/scratch/general/nfs1/utu_4310/whiptail_shared_data/raw_reads
 mkdir -p $wd/trimmed_reads
 mkdir -p $wd/trimmed_reads/paired_reads
 mkdir -p $wd/trimmed_reads/unpaired_reads
@@ -20,11 +21,11 @@ module load trimmomatic
 
 echo "Beggining trimming."
 
-cd $wd/raw_reads
+cd $raw_reads_dir/raw_reads
 ls *.fq.gz | cut -d "_" -f 1,2,3,4 | sort | uniq > fq_list.txt
 while read sample; do
-	read1=$wd/raw_reads/${sample}_1.fq.gz 
-	read2=$wd/raw_reads/${sample}_2.fq.gz
+	read1=$raw_reads_dir/raw_reads/${sample}_1.fq.gz 
+	read2=$raw_reads_dir/raw_reads/${sample}_2.fq.gz
 	output_p_1=$wd/trimmed_reads/paired_reads/${sample}.paired1.fq.gz
 	output_u_1=$wd/trimmed_reads/unpaired_reads/${sample}.unpaired1.fq.gz
 	output_p_2=$wd/trimmed_reads/paired_reads/${sample}.paired2.fq.gz
