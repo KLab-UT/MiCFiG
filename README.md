@@ -13,9 +13,9 @@ Testing: A total of 12 files were used where two were Python and ten were bash s
   - [Pipeline](#pipeline)
 - [Next Steps](#nextsteps)
 
-# Abstract
+# Introduction (Project Impetus)
 
- Hybrid parthenogenic whiptail species have lower endurance capacity and mitochondrial respiration than their sexual parental species. These differences in aerobic performance may be due to reduced compatibility of variable gene products between the divergent parental genomes that are present in the hybrids. If this is the case, we expect to see genetic variation in mitochondrial-targetting genes. We performed whole-genome sequencing for four sexual whiptail species that are parental species to hybrid parthenogenetic species, and we mapped those samples to an annotated whiptail genome. We call gene variants and classify them as coding, non-coding, synonymous, and non-synonymous to understand which variants might contribute to phenotypic variation, and we discuss approaches to further elucidate the genetic mechanism behind the lower aerobic performance in hybrid parthenogens.
+ Hybrid parthenogenic whiptail species have lower endurance capacity and mitochondrial respiration than their sexual parental species. These differences in aerobic performance may be due to reduced compatibility of variable gene products between the divergent parental genomes that are present in the hybrids. If this is the case, we expect to see genetic variation in nuclear-encoded, mitochondrial-targetting genes (Nmt genes). We performed whole-genome sequencing for four sexual whiptail species that are parental species to hybrid parthenogenetic species, and we mapped those samples to an annotated whiptail genome. We will call gene variants and filter out the variants in Nmt genes using a GFF provided by MiCFiG.
 
 # Hypothesis
 We hypothesize that lower endurance and mitochondrial respiration in these lizards is a result of reduced genetic compatibility in NMT genes due to either 
