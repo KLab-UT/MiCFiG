@@ -62,7 +62,7 @@ def Create_Search_Terms(mito):
         if synonyms[0] != '-':
             #ignores the blank inputs
             search_terms.extend(synonyms)
-        terms_list = ['|' + word + '_HUMAN' for word in search_terms]
+        terms_list = ["gene-" + word for word in search_terms]
         #formats all of the terms correctly for better search accuracy
     return terms_list
 

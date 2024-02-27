@@ -1,0 +1,8 @@
+GCA_000001635.9_GRCm39_genomic.gff.gz
+GCF_000001405.40_GRCh38.p14_genomic.gff.gz
+GCF_000001635.27_GRCm39_genomic.gff.gz
+GCF_000004195.4_UCB_Xtro_10.0_genomic.gff.gz
+GCF_000090745.1_AnoCar2.0_genomic.gff.gz
+GCF_000754665.1_Bison_UMD1.0_genomic.gff.gz
+GCF_027579735.1_aBomBom1.pri_genomic.gff.gz
+GCF_028858775.1_NHGRI_mPanTro3-v1.1-hic.freeze_pri_genomic.gff.gz
