@@ -1,4 +1,5 @@
 import argparse
+import os 
 from Bio import SeqIO, Entrez
 
 def fetch_protein_cds(protein_accession):
@@ -10,7 +11,7 @@ def fetch_protein_cds(protein_accession):
     try:
         handle = Entrez.efetch(db="protein", id=protein_accession, rettype="gb", retmode="text")
         protein_record = SeqIO.read(handle, "genbank")
-        print(f"Protein Record: {protein_record}")
+        #print(f"Protein Record: {protein_record}")
     except Exception as e:
         print(f"Error fetching protein record: {e}")
         return None
@@ -56,7 +57,7 @@ def get_accesions(fasta_file):
 
 def save_records(records, output_directory):
     """ 
-    Save a list of SeqIO records as individual fastas named after the record id in output_directory
+    Save a list of SeqIO records as individual fastas in output_directory named after the record id
     """
     for record in records:
         output_file_path = os.path.join(output_directory, f"{record.id}.fasta")
