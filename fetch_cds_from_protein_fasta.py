@@ -28,7 +28,6 @@ def fetch_protein_cds(protein_accession, output_directory, max_retries=3, retry_
         return None
 
     # Get accession ID encoding sequence associated with protein accession
-    print(f"Features in protein record: {len(protein_record.features)}")
     for feature in protein_record.features:
         #print(f"protein feature: {feature}\nfeature type: {feature.type}\nfeature qualifiers: {feature.qualifiers}")
         if feature.type == "CDS" and "coded_by" in feature.qualifiers:
@@ -51,10 +50,11 @@ def fetch_protein_cds(protein_accession, output_directory, max_retries=3, retry_
 
                     # Write sequence
                     output_file_path = os.path.join(output_directory, f"{coding_record.id}.fasta")
+                    print(f"Writing cds: {output_file_path}")
                     SeqIO.write(coding_record, output_file_path, 'fasta')
 
                 except Exception as e:
-                    print(f"Error fetching protein record (Attempt {retry_count + 1}): {e}")
+                    print(f"Error fetching cds record (Attempt {retry_count + 1}): {e}")
                     retry_count += 1
                     time.sleep(retry_delay)
             if retry_count == max_retries:
