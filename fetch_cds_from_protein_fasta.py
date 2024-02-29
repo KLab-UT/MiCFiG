@@ -14,7 +14,7 @@ def fetch_protein_cds(protein_accession, output_directory, max_retries=3, retry_
             handle = Entrez.efetch(db="protein", id=protein_accession, rettype="gb", retmode="text")
             protein_record = SeqIO.read(handle, "genbank")
             handle.close()
-            print(f"Successfully fetched protein record for {protein_accession}")
+            #print(f"Successfully fetched protein record for {protein_accession}")
             break  # If successful, exit the loop
         except Exception as e:
             print(f"Error fetching protein record (Attempt {retry_count + 1}): {e}")
@@ -52,6 +52,7 @@ def fetch_protein_cds(protein_accession, output_directory, max_retries=3, retry_
                     output_file_path = os.path.join(output_directory, f"{coding_record.id}.fasta")
                     print(f"Writing cds: {output_file_path}")
                     SeqIO.write(coding_record, output_file_path, 'fasta')
+                    break
 
                 except Exception as e:
                     print(f"Error fetching cds record (Attempt {retry_count + 1}): {e}")
