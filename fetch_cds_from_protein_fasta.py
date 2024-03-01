@@ -95,7 +95,7 @@ def save_records(records, output_directory):
 
 def log_accessions(accessions_dict):
     # Log protein and corresponding cds accesions
-    with open("protein_cds_accessions.csv", newline='') as csv_file:
+    with open("protein_cds_accessions.csv", 'w', newline='') as csv_file:
         writer = csv.writer(csv_file)
         for key, value in accessions_dict.items():
             writer.writerow([key, value])
