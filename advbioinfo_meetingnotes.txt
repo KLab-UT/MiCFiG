@@ -1,0 +1,6 @@
+# 4/9/24
+
+David = Follow the outline for filter_blast_results
+    Take the blast results and find the start and stop points for each chromosome match
+        Minimum start point and maximum stop point
+
