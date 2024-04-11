@@ -43,6 +43,7 @@ module load blast
 # Loop through cds fastas
 for fasta in "$cds_fastas_dir"/*fasta; do
     # Get the filename without extension
+    echo "$fasta"
     filename=$(basename "$fasta" .fasta)
 
     # Define output file path
