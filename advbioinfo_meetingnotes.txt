@@ -1,5 +1,6 @@
 # 4/9/24
 
+
 What We Did:
 Worked on setting up work for Alex & David to do on the project
 Got blast_script.sh working(?) - Reagan is runnning it on the actual project data
@@ -7,5 +8,6 @@ Got blast_script.sh working(?) - Reagan is runnning it on the actual project dat
 David = Follow the outline for filter_blast_results
     Take the blast results and find the start and stop points for each chromosome match
         Minimum start point and maximum stop point
+	
 
 Alex = filter.gff
