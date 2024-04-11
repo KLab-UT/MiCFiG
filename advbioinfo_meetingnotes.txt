@@ -1,3 +1,13 @@
+# 4/11/24
+
+Alex:
+	https://bedtools.readthedocs.io/en/latest/content/tools/multiinter.html
+	Use this tool for comparing blast results with GFF file
+
+David:
+	Output of process_blast_results.sh/py should be a BED file
+
+
 # 4/9/24
 
 
