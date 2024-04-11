@@ -11,6 +11,7 @@
 results_dir=./test_results_dir
 output_file=$2
 
+
 ls $results_dir
 
 # Parse the results files in results dir
