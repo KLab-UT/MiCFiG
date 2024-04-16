@@ -22,17 +22,20 @@ fi
 
 overlap() {
 
-    local start1="$1"
-    local stop1="$2"
-    local start2="$3"
-    local stop2="$4"
+    local blast_start="$1"
+    local blast_stop="$2"
+    local gff_start="$3"
+    local gff_stop="$4"
 
-    [ start1 <= stop2 ] && [ stop1 >= start2]
+    [ "$blast_start" -le "$gff_stop" ] && [ "$blast_stop" -ge "$gff_start" ]
 }
 
 while IFS=$"\t" read -r chromosome start_value stop_value; do
-    awk -v start="$start_value" -v stop="$stop_value" -v chromosome="$chromosome" \
-        {if ($1 == chrom && overlap($4, $5, start, stop)) print} "$input_gff"
+    echo($chromsome)
+    echo($start_value)
+    echo($stop_value)
+#    awk -v blast_start="$start_value" -v blast_stop="$stop_value" -v blast_chromo="$chromosome" \
+#        {if ($1 == blast_chromo && overlap(blast_start, blast_stop, $4, $5)) print} "$input_gff"
 done < "$input_bed" > "$output_gff"
 
 # I'm assuming that the BED file is simply chromosome number, start coordinate,
