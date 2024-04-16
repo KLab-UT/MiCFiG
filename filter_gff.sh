@@ -27,7 +27,7 @@ overlap() {
     local start2="$3"
     local stop2="$4"
 
-    [ start1 <= stop2 ] && [ stop1 >= start2]
+    [ "$start1" -le "$stop2" ] && [ "$stop1" -ge "$start2" ]
 }
 
 while IFS=$"\t" read -r chromosome start_value stop_value; do
