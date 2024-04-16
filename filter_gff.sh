@@ -6,12 +6,12 @@ if [ "$#" -ne 3 ]; then
     exit 1
 fi
 
-input_results=$1
+input_bed=$1
 input_gff=$2
 output_gff=$3
 
-if [ ! -f "$input_results" ]; then
-    echo "Error: Input file of filtered BLAST results not found."
+if [ ! -f "$input_bed" ]; then
+    echo "Error: Input BED file of filtered BLAST results not found."
     exit 1
 fi
 
@@ -30,7 +30,10 @@ overlap() {
     [ start1 <= stop2 ] && [ stop1 >= start2]
 }
 
-while IFS=$"\t" read -r query_id chromosome start_value stop_value; do
+while IFS=$"\t" read -r chromosome start_value stop_value; do
     awk -v start="$start_value" -v stop="$stop_value" -v chromosome="$chromosome" \
         "$1 == chrom && overlap($4, $5, start, stop)" "$input_gff"
-done < "$input_results" > "$output_gff"
+done < "$input_bed" > "$output_gff"
+
+# I'm assuming that the BED file is simply chromosome number, start coordinate,
+# and stop coordinate.
