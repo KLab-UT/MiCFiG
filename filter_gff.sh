@@ -32,7 +32,7 @@ overlap() {
 
 while IFS=$"\t" read -r chromosome start_value stop_value; do
     awk -v start="$start_value" -v stop="$stop_value" -v chromosome="$chromosome" \
-        {if ($1 == chrom && overlap($4, $5, start, stop)) print} "$input_gff"
+        {if ($1 == chromosome && overlap($4, $5, start, stop)) print} "$input_gff"
 done < "$input_bed" > "$output_gff"
 
 # I'm assuming that the BED file is simply chromosome number, start coordinate,
