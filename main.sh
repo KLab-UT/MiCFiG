@@ -7,7 +7,7 @@ cd /uufs/chpc.utah.edu/common/home/u6052680/MiCFiG
 
 
 #Use tblastn with protein_fastas to search for alignments in blast_db
-bash blast_script.sh -d fastas/protein_fastas -b $blast_db -o $outputDir/tblastn_output -t tblastn
+#bash blast_script.sh -d fastas/protein_fastas -b $blast_db -o $outputDir/tblastn_output -t tblastn
 
 # Convert blastn results to bed files
 #bash process_blast_results.sh /scratch/general/nfs1/utu_4310/whiptail_shared_data/blast_results/blastn_output/ /scratch/general/nfs1/utu_4310/MiCFiG_wd/blastn_bed_files/
