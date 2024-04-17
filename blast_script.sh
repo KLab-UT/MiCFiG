@@ -47,16 +47,16 @@ for fasta in "$cds_fastas_dir"/*fasta; do
     filename=$(basename "$fasta" .fasta)
 
     # Define output file path
-    output_file="$output_dir/$filename.csv"
+    output_file="$output_dir/$filename.xml"
     
     # Perform blast search and save output to the defined file
     if [[ "$blast_type" == "blastn" ]]; then
-            blastn -query "$fasta" -db "$db" -outfmt "6 qseqid sseqid sstart send evalue pident" -out "$output_file"
+            blastn -query "$fasta" -db "$db" -outfmt "5" -out "$output_file"
     fi
 
 
     if [[ "$blast_type" == "tblastn" ]]; then
-	    tblastn -query "$fasta" -db "$db" -outfmt "6 qseqid sseqid sstart send evalue pident" -out "$output_file"
+	    tblastn -query "$fasta" -db "$db" -outfmt "5" -out "$output_file"
     fi 
 done
 
