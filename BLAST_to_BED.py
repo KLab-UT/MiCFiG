@@ -77,10 +77,10 @@ class Hsp(object):
             assert isinstance(hstrand, int)
         except AssertionError:
             raise TypeError
-        try:
-            assert hstrand == 1 or hstrand == -1
-        except AssertionError:
-            raise ValueError
+        # try:
+        #     assert hstrand == 1 or hstrand == -1
+        # except AssertionError:
+        #     raise ValueError
         self._chrom = chrom
         self._name = name
         self._evalue = evalue
