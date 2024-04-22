@@ -8,6 +8,7 @@ module load blast
 results_dir=$1 # Directory to blast results in XML format
 output_dir=$2 # Directory to save BED outputs
 
+
 ls $results_dir
 cd /uufs/chpc.utah.edu/common/home/u6052680/MiCFiG
 
