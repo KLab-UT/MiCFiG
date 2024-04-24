@@ -56,7 +56,7 @@ NP_000099,DLD,Chr_7	AUGUSTUS	gene	17121021	17137177	.	+	.	ID=Marm_25693;
 NP_000107,TAZ,"Chr_2	AUGUSTUS	gene	166124304	166130807	.	-	.	ID=Marm_14726;blast_id=""sp|Q16635|TAZ_HUMAN"";interproscan_id=""IPR000872"";eggnog_id=""cardiolipin_acyl-chain_remodeling"""
 NP_000117,ETFA,"Chr_16	AUGUSTUS	gene	825087	842514	.	-	.	ID=Marm_08902;blast_id=""sp|P13804|ETFA_HUMAN"";interproscan_id=""IPR001308"";eggnog_id=""fatty_acid_beta-oxidation_using_acyl-CoA_dehydrogenase"""
 NP_000131,FECH,"Chr_9	AUGUSTUS	gene	15482424	15512352	.	-	.	ID=Marm_29070;blast_id=""sp|P22830|HEMH_HUMAN"";interproscan_id=""IPR001015"";eggnog_id=""ferrochelatase_activity"""
-NP_000134,FH,
+NP_000134,FH,no overlap
 NP_000135,FXN,"Chr_9	AUGUSTUS	gene	74655477	74664475	.	-	.	ID=Marm_29469;blast_id=""sp|Q16595|FRDA_HUMAN"";interproscan_id=""IPR036524"";eggnog_id=""regulation_of_ferrochelatase_activity"""
 NP_000150,GCDH,"Chr_2	AUGUSTUS	gene	171813367	171829173	.	+	.	ID=Marm_12722;blast_id=""sp|Q92947|GCDH_HUMAN"";interproscan_id=""IPR009100"";eggnog_id=""glutaryl-CoA_dehydrogenase"""
 NP_000161,GLDC,"Chr_9	AUGUSTUS	gene	77803687	77867888	.	-	.	ID=Marm_29498;blast_id=""sp|P23378|GCSP_HUMAN"";interproscan_id=""IPR020581"";eggnog_id=""glycine_dehydrogenase_(decarboxylating)_activity"""
@@ -1119,7 +1119,7 @@ NP_003696,SLC25A12,"Chr_10	AUGUSTUS	gene	29698243	29815480	.	-	.	ID=Marm_04971;b
 NP_003739,ALDH4A1,"Chr_22	AUGUSTUS	gene	10002424	10020636	.	+	.	ID=Marm_16092;blast_id=""sp|P30038|AL4A1_HUMAN"";interproscan_id=""IPR005931"";eggnog_id=""1-pyrroline-5-carboxylate_dehydrogenase_activity"""
 NP_003767,MRPL40,"Chr_17	AUGUSTUS	gene	4940660	4946018	.	+	.	ID=Marm_09218;blast_id=""sp|Q9NQ50|RM40_HUMAN"";interproscan_id=""IPR039145"";eggnog_id=""ribosomal_protein_L40"""
 NP_003837,PEX11B,"Chr_16	AUGUSTUS	gene	16217232	16223202	.	+	.	ID=Marm_08799;blast_id=""sp|O75192|PX11A_HUMAN"";interproscan_id=""IPR008733"";eggnog_id=""regulation_of_peroxisome_size"""
-NP_003840,SUCLG1,
+NP_003840,SUCLG1,no overlap
 NP_003867,TMEM11,"Chr_18	AUGUSTUS	gene	5959046	5971362	.	+	.	ID=Marm_09751;blast_id=""sp|P17152|TMM11_HUMAN"";interproscan_id=""IPR026120"";eggnog_id=""Transmembrane_protein_11"""
 NP_004037,ATP5F1A,"Chr_9	AUGUSTUS	gene	8746401	8754646	.	-	.	ID=Marm_29020;blast_id=""sp|P25705|ATPA_HUMAN"";interproscan_id=""IPR005294"";eggnog_id=""Produces_ATP_from_ADP_in_the_presence_of_a_proton_gradient_across_the_membrane"""
 NP_004040,BCL2A1,"Chr_16	AUGUSTUS	gene	15948314	15950821	.	+	.	ID=Marm_08794;blast_id=""sp|Q16548|B2LA1_HUMAN"";interproscan_id=""IPR013282"";eggnog_id=""Bcl-2-related_protein_A1"""
@@ -1331,7 +1331,7 @@ NP_036591,TIMM8B,"Chr_12	AUGUSTUS	gene	17132279	17133939	.	+	.	ID=Marm_06278;bla
 NP_036592,TIMM9,"Chr_5	AUGUSTUS	gene	7395503	7398706	.	-	.	ID=Marm_23119;blast_id=""sp|Q9Y5J7|TIM9_HUMAN"";interproscan_id=""IPR035427"";eggnog_id=""Translocase_of_inner_mitochondrial_membrane_9"""
 NP_036605,TXN2,"Chr_7	AUGUSTUS	gene	63207012	63270386	.	+	.	ID=Marm_26014;blast_id=""sp|O15371|EIF3D_HUMAN"";interproscan_id=""IPR007783"";eggnog_id=""FAD-dependent_oxidoreductase"""
 NP_037369,PRELID1,"Chr_2	AUGUSTUS	gene	73901529	73905849	.	-	.	ID=Marm_13927;blast_id=""sp|Q9Y255|PRLD1_HUMAN"";interproscan_id=""IPR037365"";eggnog_id=""phosphatidic_acid_transporter_activity"""
-NP_037379,HTRA2,
+NP_037379,HTRA2,no overlap
 NP_037399,GLS2,"Chr_11	AUGUSTUS	gene	42919145	42990669	.	-	.	ID=Marm_05952;blast_id=""sp|O94925|GLSK_HUMAN"";interproscan_id=""IPR015868"";eggnog_id=""glutamine_catabolic_process"""
 NP_037460,PYCR2,"Chr_2	AUGUSTUS	gene	127603674	127614987	.	+	.	ID=Marm_12230;blast_id=""sp|P32322|P5CR1_HUMAN"";interproscan_id=""IPR000304"";eggnog_id=""Pyrroline-5-carboxylate_reductase"""
 NP_037469,TIMM22,"Chr_21	AUGUSTUS	gene	1438852	1441774	.	-	.	ID=Marm_15762;blast_id=""sp|Q9Y584|TIM22_HUMAN"";interproscan_id=""IPR039175"";eggnog_id=""Mitochondrial_import_inner_membrane_translocase_subunit_Tim22"""
