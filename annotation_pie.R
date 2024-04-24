@@ -5,13 +5,13 @@ df <- read.csv("tblastn_log.csv")
 annotations <- df[, 3]
 
 not_found <- grepl("not found by blast", annotations)
-overlap <- grepl(";blast_id", annotations)
-no_overlap <- !overlap
+no_overlap <- grepl("no overlap", annotations)
+overlap <- !overlap
 
 df_categorized <- data.frame(
   Annotation = annotations,
   Category = ifelse(not_found, "Not Found",
-                    ifelse(overlap, "Overlap", "No Overlap"))
+                    ifelse(no_overlap, "No Overlap", "Overlap"))
 )
 
 category_counts <- table(df_categorized$Category)
