@@ -1,18 +1,17 @@
-library(tidyverse)
-
-setwd("//wsl.localhost/Ubuntu/home/reagan/bioinformatics/MiCFiG/")
+setwd(".")
 
 df <- read.csv("tblastn_log.csv")
 
+annotations <- df[, 3]
+
 not_found <- grepl("not found by blast", annotations)
 no_overlap <- grepl("no overlap", annotations)
-overlap <- !no_overlap
-
+overlap <- !overlap
 
 df_categorized <- data.frame(
   Annotation = annotations,
   Category = ifelse(not_found, "Not Found",
-                    ifelse(overlap, "Overlap", "No Overlap"))
+                    ifelse(no_overlap, "No Overlap", "Overlap"))
 )
 
 category_counts <- table(df_categorized$Category)
