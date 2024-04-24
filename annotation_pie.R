@@ -1,12 +1,13 @@
-setwd(".")
+library(tidyverse)
+
+setwd("//wsl.localhost/Ubuntu/home/reagan/bioinformatics/MiCFiG/")
 
 df <- read.csv("tblastn_log.csv")
 
-annotations <- df[, 3]
-
 not_found <- grepl("not found by blast", annotations)
-overlap <- grepl(";blast_id", annotations)
-no_overlap <- !overlap
+no_overlap <- grepl("no overlap", annotations)
+overlap <- !no_overlap
+
 
 df_categorized <- data.frame(
   Annotation = annotations,
