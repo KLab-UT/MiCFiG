@@ -6,11 +6,13 @@
 
 import sys
 import os
+import csv
 
 class GFF_entry:
     def __init__(self, gff_line):
         gff_fields = gff_line.strip().split('\t')
         self.g_chrom = gff_fields[0]
+        self.feature_type = gff_fields[2]
         self.g_start = int(gff_fields[3])
         self.g_stop = int(gff_fields[4])
         self.g_line = gff_line
@@ -24,7 +26,7 @@ class BED_entry:
             self.b_stop = int(b_fields[2])
             self.b_line = bed_line
         except:
-            print("error making BED_entry for: {bed_line}")
+            print(f"error making BED_entry for: {bed_line}")
 
 def overlap(bed_entry, gff_entry):
         # Check for overlap in the start stop values of GFF and BED entry
@@ -35,7 +37,7 @@ def overlap(bed_entry, gff_entry):
             return False  # There's no overlap
         
 def make_gff_dict(input_gff):
-    # Read a GFF file into a dictionary organized by chromosome, return the dictionary
+    # Read a gene entries in GFF file into a dictionary organized by chromosome, return the dictionary
     gff_dict_by_chrom = {}
 
     # Skip comment lines at the beginning of the GFF file
@@ -47,7 +49,7 @@ def make_gff_dict(input_gff):
     # Process non-comment lines
     with open(input_gff, 'r') as gff_file:
         for line in gff_file:
-            if not line.startswith('##'):
+            if not line.startswith('##') and "gene" in line:
                 # Initilize GFF_entry object
                 g_entry = GFF_entry(line)
 
@@ -56,7 +58,8 @@ def make_gff_dict(input_gff):
                     gff_dict_by_chrom[g_entry.g_chrom] = []
 
                 # Append the GFF entry to the list for the corresponding chromosome
-                gff_dict_by_chrom[g_entry.g_chrom].append(g_entry)
+                if g_entry.feature_type == "gene":
+                    gff_dict_by_chrom[g_entry.g_chrom].append(g_entry)
 
     # Print all the chromosomes
     print("Chromosomes found in the GFF file:")
@@ -64,15 +67,15 @@ def make_gff_dict(input_gff):
         print(chrom)
     return gff_dict_by_chrom
 
-
 def main():
-    if len(sys.argv) != 4:
-        print("Usage: {} <input_bed_directory> <input_gff> <output_gff_directory>".format(sys.argv[0]))
+    if len(sys.argv) != 5:
+        print("Usage: {} <input_bed_directory> <input_gff> <output_gff_directory> <genes_ids_csv>".format(sys.argv[0]))
         sys.exit(1)
 
     input_bed_dir = sys.argv[1]
     input_gff = sys.argv[2]
     output_gff_dir = sys.argv[3]
+    gene_ids = sys.argv[4]
 
     # Create output directory if it doesn't exist
     os.makedirs(output_gff_dir, exist_ok=True)
@@ -96,37 +99,58 @@ def main():
     gff_dict = make_gff_dict(input_gff)
 
     # loop through bed files and check for overlaps in gff
-    for input_bed in [f for f in os.listdir(input_bed_dir) if f.endswith('.bed')]:
+    beds = [f for f in os.listdir(input_bed_dir) if f.endswith('.bed')]
+
+    no_overlaps=set() # List of bed lines with no overlap in gff
+    not_found=[] # list of seqIDs for empty bed files
+
+    no_overlap_output = os.path.join(output_gff_dir, "no_overlap.bed") # Output for sequences hit by blast but with no overlap in gff
+    not_found_output = os.path.join(output_gff_dir, "not_found.txt") # Output for sequences not hit by blast
+
+    print(f"total bed files: {len(beds)}")
+    for input_bed in beds:
         input_bed_path = os.path.join(input_bed_dir, input_bed)
-        print(input_bed_path)
-        no_overlap_output = os.path.join(output_gff_dir, "no_overlap.bed") # Output for sequences hit by blast but with no overlap in gff
-        not_found_output = os.path.join(output_gff_dir, "not_found.txt") # Output for sequences not hit by blast
-        if os.path.getsize(input_bed_path) > 0:  # Check if the BED file is not empty
-            print("checking for overlap in", input_bed_path)
-            output_gff = os.path.join(output_gff_dir, os.path.basename(input_bed_path) + ".gff")
+        output_gff = os.path.join(output_gff_dir, (os.path.basename(input_bed_path).replace(".bed", ".gff")))
+        #if os.path.getsize(input_bed_path) > 0:  # Check if the BED file is not empty
+        print("checking for overlap in", input_bed_path)
+        with open(input_bed_path, 'r') as bed_file:
+            with open(output_gff, 'a') as out_gff_file:
+                b_line = bed_file.read()
+                b_entry = BED_entry(b_line)
 
-            print("output_gff:", output_gff)
-            with open(input_bed_path, 'r') as bed_file:
-                for b_line in bed_file:
-                    b_entry = BED_entry(b_line)
+                to_write = "" # Line to write to gff
+                overlap_found = False
+                # Check if the chromosome key exists in the gff dictionary
+                if b_entry.b_chrom in gff_dict:
+                    # Loop through GFF entries for the same chromosome
+                    for g_entry in gff_dict[b_entry.b_chrom]:
+                        if overlap(b_entry, g_entry):
+                            to_write = g_entry.g_line
+                            overlap_found = True
+                            break
+                    if not overlap_found:
+                        print(f"No overlap found in GFF, writing BED entry to: {no_overlap_output}\n{b_line}")
+                        no_overlaps.add(b_line)                    
 
-                    # Check if the chromosome key exists in the dictionary
-                    if b_entry.b_chrom in gff_dict:
-                        # Loop through GFF entries for the same chromosome
-                        for g_entry in gff_dict[b_entry.b_chrom]:
-                            if overlap(b_entry, g_entry):
-                                with open(output_gff, 'a') as out_gff_file:
-                                    print(f"Writing overlapping gff line to {output_gff}\n{g_entry.g_line}")
-                                    out_gff_file.write(g_entry.g_line + '\n')
-                    else:
-                        print(f"No overlap found in GFF, writing BED entry to: {no_overlap_output}")
-                        with open(no_overlap_output, 'a') as no_overlap:
-                            no_overlap.write(b_line) 
-        else:
-            print(f"No overlap, BED file is empty, writing seq_id to: {not_found_output}")
-            with open(not_found_output, 'a') as not_found:
-                seq_id = input_bed.replace(".bed", "")
-                not_found.write(seq_id + '\n')
+                elif b_line != "": # Chromosome not in gff, write bed entry to no_overlap
+                    print(f"No overlap found in GFF, writing BED entry to: {no_overlap_output}\n{b_line}")
+                    no_overlaps.add(b_line)
+
+                else: # Not found, write seqID to not_found
+                    seq_id = input_bed.replace(".bed", "")
+                    print(f"{seq_id} not found by blast, appending to not_found")
+                    not_found.append(seq_id)
+
+                out_gff_file.write(to_write)
+    
+    with open(no_overlap_output, "w") as no_overlap_out:
+        for line in no_overlaps:
+            no_overlap_out.write(line + "\n")
+
+    with open(not_found_output, "w") as not_found_out:
+        for id in not_found:
+            not_found_out.write(id + "\n")
+
 
 if __name__ == "__main__":
     main()

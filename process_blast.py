@@ -38,7 +38,7 @@ class BlastHit:
                 if hsp.hsp_num == 1:
                     self.top_hsp=hsp
                     break
-        self.overall_identity = self.calculate_overall_identity() # NOT ACTUALLY OVERALL IDEntity
+        self.overall_identity = self.calculate_percent_identity() # TOP HSP identity
         
     
     def create_hsp_object(self, hsp_element):
@@ -64,16 +64,19 @@ class BlastHit:
             hseq=hsp_element.find("Hsp_hseq").text,
             midline=hsp_element.find("Hsp_midline").text
         )
+    def calculate_percent_identity(self):
+        """
+        Calculate the percentage identity between query and hit sequences from top HSP
+        """
+        qseq = self.top_hsp.qseq
+        hseq = self.top_hsp.hseq
     
-    def calculate_overall_identity(self):
-        """
-        Calculates the overall percent idendity for a blast hit taking all hsps into account
-        Identity is determined by summing the identical characters for each = (Hsp_idnetity x align_len / 10)
-        and dividing this sum by total query length then round to nearest int
-        """
-        if self.top_hsp is not None:
-            return self.top_hsp.identity
-        return 0
+        if len(qseq) != len(hseq):
+            raise ValueError("Query and hit sequences must be of the same length")
+        
+        identity_count = sum(1 for q, h in zip(qseq, hseq) if q == h)
+        percent_identity = (identity_count / len(qseq)) * 100
+        return percent_identity
 
     def make_bed(self, output_path):
         """
@@ -93,7 +96,6 @@ class BlastHit:
                 if self.query_id in row:
                     return row[0]  # Return the first field of the row where the ID is found
         return None  # Return None if the query ID is not found in the CSV
-
 
 
 class Hsp:
@@ -145,7 +147,6 @@ def log_identity(blast_hit, identities_csv):
         writer.writerow(entry)
 
 
-
 def parse_blast(tree_root, gene_ids_csv, bed_output_path, identities_output_csv):
     """
     """
@@ -162,6 +163,11 @@ def parse_blast(tree_root, gene_ids_csv, bed_output_path, identities_output_csv)
             top_hit.make_bed(bed_output_path)
             log_identity(top_hit, identities_output_csv)
             break
+    # If top_hit is None, save an empty file at bed_output_path
+    if top_hit is None:
+        with open(bed_output_path, 'w') as empty_file:
+            pass
+
     
 
 def main(xml_file, gene_ids_csv, bed_output_path, identities_output_csv):

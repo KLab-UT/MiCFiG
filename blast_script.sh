@@ -19,7 +19,7 @@ usage() {
 # Parse arguments
 while getopts ":d:b:o:t:" opt; do
     case $opt in
-        d) cds_fastas_dir=$OPTARG ;;
+        d) fastas_dir=$OPTARG ;;
         b) db=$OPTARG ;;
         o) output_dir=$OPTARG ;;
 	t) blast_type=$OPTARG ;;
@@ -29,7 +29,7 @@ while getopts ":d:b:o:t:" opt; do
 done
 
 # Check if mandatory arguments are provided
-if [ -z "$cds_fastas_dir" ] || [ -z "$db" ]; then
+if [ -z "$fastas_dir" ] || [ -z "$db" ]; then
     echo "Mandatory arguments missing!"
     usage
 fi
@@ -41,7 +41,7 @@ mkdir -p "$output_dir"
 module load blast
 
 # Loop through cds fastas
-for fasta in "$cds_fastas_dir"/*fasta; do
+for fasta in "$fastas_dir"/*fasta; do
     # Get the filename without extension
     echo "$fasta"
     filename=$(basename "$fasta" .fasta)

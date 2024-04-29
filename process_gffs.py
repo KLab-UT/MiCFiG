@@ -42,11 +42,7 @@ def main(gene_ids_csv, gff_directory, output_csv, merged_gff, not_found_file):
             for gff_file in gff_files:
                 query_id = gff_file.split(".")[0]
                 human_gene = get_query_gene(query_id, gene_ids_csv)
-
                 gff_path = os.path.join(gff_directory, gff_file)
-                
-                # Initialize annotation variable
-                gff_annotation = "no overlap"
                 
                 # Check if the current GFF file has been processed
                 if gff_file not in processed_files:
@@ -64,7 +60,7 @@ def main(gene_ids_csv, gff_directory, output_csv, merged_gff, not_found_file):
                 if query_id in not_found_list:
                     gff_annotation = "not found by blast"
                 # Write overlaping annotations to a merged gff
-                if gff_annotation != "not found by blast":
+                if gff_annotation != "not found by blast" and gff_annotation != "no overlap":
                     merged_file.write(gff_annotation)
                     merged_file.write("\n")
                 
