@@ -1,0 +1,8 @@
+5.22.24
+    Meeting with Alex and Randy
+    To-dos:
+        1. Get permissions to read/write/execute all files on scratch (Reagan's files)
+        2. Clean up github repository
+        3. Add MitoCarta geneID to the filtered gff
+            The way I recommend going about this second point is to create a text file with two columns. The first column would have the "NP" or "YP" number, and the second column would have the gene ID. Each of these are in the mitocarta_proteins.fasta file on the fasta header line, with the first element (right after the '>') being the NP/YP number, and the last element being the gene name. Don't worry about the GeneID (the number in the middle). You can loop through this
+            text file and read the first column to know which file to change. For example, for the gene NP_060626 the text file would look like this: "NP_060626    VPS13D". You could then insert the gene name into this file using a sed command like "sed -i '/blast_id=/mito_carta_id=${gene_name};blast_id/'"
