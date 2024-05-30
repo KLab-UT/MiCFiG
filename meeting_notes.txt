@@ -1,3 +1,10 @@
+5.29.24
+    Meeting with Alex and Randy
+    To-dos:
+        1. Add MitoCarta geneID to the filtered gff
+        2. Clean up ReadMe (rather than focus on whiptails in the overview, focus on the purpose of MiCFiG. Provide a walkthrough of how to run it.)
+        3. Run MiCFiG on other squamate genomes (if you get to this point, let me know and we can talk about how to choose the genomes)
+
 5.22.24
     Meeting with Alex and Randy
     To-dos:
