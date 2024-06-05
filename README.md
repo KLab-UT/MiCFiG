@@ -1,111 +1,56 @@
 # MiCFiG
-MiCFiG is a bioinformatics tool for using the **Mi**to**C**arta database to **Fi**lter a **G**FF file.
 
-Testing: A total of 12 files were used where two were Python and ten were bash scripts to examine the amount of genetic variation in nuclear-encoded mitochondrial-targetting (NMT) genes between sexual species of whiptail lizards (genus Aspidoscelis) using whole-genome sequencing data.
+MiCFiG (MitoCarta Filter GFF) is a bioinformatics tool that uses the MitoCarta genomic database to to filter GFF files of nonmodel organisms.
 
 # Contents
 
-- [Abstract](#abstract)
-- [Hypothesis](#hypothesis)
+- [Context](#context)
 - [Methods](#methods)
-  - [Gff_Mito_Scan](#walkthrough-Gff_Mito_Scan)
-  - [Match_Data](#walkthrough-Match_Data)
+  - [Scripts](#scirpts)
   - [Pipeline](#pipeline)
-- [Next Steps](#nextsteps)
+- [Walkthrough](#walkthrough)
 
-# Introduction (Project Impetus)
+## Context
 
- Hybrid parthenogenic whiptail species have lower endurance capacity and mitochondrial respiration than their sexual parental species. These differences in aerobic performance may be due to reduced compatibility of variable gene products between the divergent parental genomes that are present in the hybrids. If this is the case, we expect to see genetic variation in nuclear-encoded, mitochondrial-targetting genes (Nmt genes). We performed whole-genome sequencing for four sexual whiptail species that are parental species to hybrid parthenogenetic species, and we mapped those samples to an annotated whiptail genome. We will call gene variants and filter out the variants in Nmt genes using a GFF provided by MiCFiG.
+A common practice in bioinformatics is to annotate genomic files. Annotation files (e.g. BED & GFF) contain the locations of known genes in genomic files, acting as a road map for genes of interest. By their definiton, the genomes model organisms are incredibly well-annotated - lots of people have taken to the call and had their work double- & triple-checked. However, the pool of non-model organisms without fully annotated genomes is vast. 
 
-# Hypothesis
-We hypothesize that lower endurance and mitochondrial respiration in these lizards is a result of reduced genetic compatibility in NMT genes due to either 
-(A) inter-genomic interactions or (B) intra-genomic interactions. 
-- Inter- and intra- prefixes are in reference to the parental genomes of the parthenogenetic whiptails, which are of hybrid origin (i.e., the crossing of two divergent species resulted in the new evolutionary lineage of the parthenogenetic species).
-  - Inter-genomic refers to interactions between parental genomes (between gene products of maternal ancestry and gene products of paternal ancestry).
-  - Intra-genomic refers to interactions within a parental genome (e.g., between nuclear gene products of maternal ancestry and mitochondrial gene products of maternal ancestry). 
+MiCFiG aims to make annotation of species with incomprehensive genetic labeling a much easier process. It does so by using BLAST to identify & filter genetic features in non-model organisms based on homologies with model species. The MitoCarta database, a catalog of mitochondrial & nuclear protein-encoding genes in *Homo sapiens* & *Mus musculus*, provides a diving board for such comparisons.
 
-Examining the NMT genetic variability between the sexual parental species provides a base for testing the inter-genomic hypothesis: If we find variation in NMT genes between hybridizing species, this variation is likely present in the genomes of the parthenogenetic species. If no variation is present in NMT genes between hybridizing species, then a source other than reduced compatibility between the divergent genomes is responsible for the reduced performance in parthenogens (e.g., intra-genomic interactions). 
+## Methods
 
-# Methods
-As a first step in this project, we will be determining whether the parental species have differences in their NMT genes, to determine if there are inter-genomic interactions. To do this we first need to determine which genes are NMT genes. 
+The MiCFiG pipeline is intended for non-model organisms with genomes that are not thoroughly annotated with informative gene names. By using the MitoCarta database, the seqeunces of known human genes are used as queries for non-model organisms to identify mitochondrial-targeting genes. These are then extracted in a filtered annotation file & named, providing annotated genes for downstream analysis.
 
-Clone the repository by navigating to the top of this page and clicking code and then copying either the https or SSH keys version. Enter the following code in the command line in the command line in the directory you want to clone it in:
+### Scripts
 
-  ```
-    git clone "link you copied"
-  ```
+* split_fasta.py
+  * Takes a comprehensive FASTA file (in this case, taken from the MitoCarta database) and splits it into individual FASTA files - one for each sequence
 
-Once you have cloned the repository 'cd' into it and we can get started. 
+* blast_script.sh
+  * Loops through FASTA files and performs a BLAST search
 
-## Walkthrough-Gff_Mito_Scan
+* process_blast_results.sh
+  * For each BLAST hit, grabs the minimum subject start and maximum subject end from the top rated HSP score
+  * process_blast.py
+    * Processes BLAST results and makes a BED file for the top hits based on HSP score
 
-Starting with the best annotated genome, `a_marmoratus_AspMarm2.0_v1.gff`, we will sort out all of the NMT genes using the file, `Human.MitoCarta3.0.csv`. This file contains all of the human NMT genes with all of their symbol names. These names will be used to sort through the gff file and pull out any of the *Amlops marmoratus* genes which have the same symbol name. 
+* filter_gff.py
+  * Identifies overlaps between BED & GFF files
+  * Determines which gene from model organism belongs with the genes in non-model organism
 
-To do this we will use the python filie `gff_mito_scan.py`. Copy the following and paste it into the command line so we can understand the file and what is required. 
+* add_gene_name.sh ( I think this goes here in the pipeline )
+  * Adds MitoCarta gene name to GFF file
+    * Accounts for potential differences in genetic nomenclature between species
+  * extract_gene_name.py
+    * Extracts gene name & sequence ID from MitoCarta-produced FASTA file & puts it in a lovely text file
 
-  ```
-    vim gff_mito_scan.py
-  ```
+* process_gff.py
+  * Creates complete & annotated GFF file for non-model organism
+  * Keeps track of genes not found to have a sister homology
 
-Now that we understand what we will need to run the file, lets copy the following code and paste it into the command line to sort through the gff file and produce our log file. 
+### Pipeline
 
-  ```
-    python gff_mito_scan.py -m Human.MitoCarta3.0.csv -g a_marmoratus_AspMarm2.0_v1.gff
-  ```
+![alt text](Pipeline.png "Generalized MiCFiG Pipeline")
 
-Or if you would like to give another name to your output files copy the following and enter your desired file names. 
+## Walkthrough
 
-  ```
-    python gff_mito_scan.py -m Human.MitoCarta3.0.csv -g a_marmoratus_AspMarm2.0_v1.gff -o 'name of output file'.gff -l 'name of log file'.txt
-  ```
-
-The desired output should resemble the following.
-
-The sorted NMT genes in a gff file:
-
-![alt text](NMTgff.png "NMT Sorted Genes gff File")
-
-The log file showing which terms hit which gene:
-
-![alt text](Log.png "Log File with hits")
-
-Once the desired output is obtained we can move on to the next script to obtain some data about the sorted genes. 
-
-## Walkthrough-Match_Data
-
-Starting with the `Human.MitoCarta3.0.csv` file again and the `log_file.txt` (or whatever you named your log file) we will create a bar plot to represent how many hits we got in each category of gene. All of the genes in the `Human.MitoCarta3.0.csv` file were sorted into each of the four categories: 'ETC', 'Ribosomal', 'Mitochondria', and 'tRNA'. 
-
-In the python file `match_data.py` we will sort the matched genes and plot them on a bar graph. Copy the following and paste it into the command line so we can understand the file and what is required. 
-
-  ```
-    vim match_data.py
-  ```
-
-Now that we understand what we will need to run the file, lets copy the following code and paste it into the command line to sort through the gff file and produce our log file. 
-
-  ```
-    python match_data.py Human.MitoCarta3.0.csv log_file.txt
-  ```
-
-The desired output should resemble the following.
-
-The bar plot:
-
-![alt text](Bar_Plt.png "Bar Plot of Figure Data")
-
-Once we have the desired output we can move on to big picture tying in the rest of the code.
-
-
-## Pipeline
-
-The bash files that are in the repository go through mapping the other genomes of the parents. Let's use the figure to help us walkthrough what is happening.
-
-![alt text](NMTPipline.PNG "dBar Plot of Figure Data")
-
-# Next Steps
-
-Moving forward the next steps will be to sort the mapped genes with the NMT genes pulled out in the output.gff file. This will pull out only the NMT genes from the mapped genes. From here we will need to quantify the difference in the genes between the parents. If there is significant difference we can assume that inter-genome interaction points to the decreased endurance and mitochondrial respiration in parthenogenic lizard species. If not, we will need to look into intra-genome interaction causing the differences. 
-
-
-
-
+Work in progress - TGK
