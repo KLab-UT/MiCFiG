@@ -12,7 +12,7 @@ MiCFiG (MitoCarta Filter GFF) is a bioinformatics tool that uses the MitoCarta g
   - [Installation](#installation)
   - [Requirements](#requirements)
   - [Steps](#steps)
-  - [Final Products](#finalproducts)
+  - [Final Products](#final-products)
 
 ## Context
 
