@@ -53,4 +53,74 @@ The MiCFiG pipeline is intended for non-model organisms with genomes that are no
 
 ## Walkthrough
 
-Work in progress - TGK
+### Installation
+
+To clone this repository using HTTPS, enter the following into the command line:
+
+	git clone https://github.com/KLab-UT/MiCFiG.git
+
+To clone this repository using SSH, enter the following into the command line:
+
+	git clone git@github.com:KLab-UT/MiCFiG.git
+
+### Requirements
+
+MiCFiG as it stands is computationally and time intensive. Using the scripts will require a high performance computer in order to function in a timely manner and without frying your machine.
+
+MiCFiG will require a starting annotated genome as a GFF file, as well as a FASTA file containing the sequences of the genome. Everything else is provided by the repository.
+
+WARNING: The scripts meant to run MiCFiG are currently specified for the test organism, *Aspidoscelis marmoratus*. We are still working on making the scripts generalized to run for any non-model organism.
+
+### Steps
+
+Before running main.sh, you need to take the target organism's genomic sequences in FASTA format and turn them into a BLAST database. This needs BLAST installed on your device, which can be accomplished by running the following code:
+
+	makeblastdb -in your_sequences.fasta -dbtype nucl -out your_database_name
+
+With your BLAST database, you can now run main.sh:
+
+	bash main.sh
+
+### Final Products
+
+Running MiCFiG will create a working directory and the following:
+
+* fastas/proteins
+  * Found in working directory
+  * Directory
+  * Contains the sequences for each protein from MitoCarta in individual files
+
+* blast_results/tblastn_output
+  * Found in working directory
+  * Directory
+  * Results from tblastn
+
+* tblastn_bed_files
+  * Found in working directory
+  * Directory
+  * BED files generated for each BLAST result
+
+* gene_ids.csv
+  * Found in repository
+  * File
+  * Contains genes and their associated IDs
+
+* tblastn_gff_filtered
+  * Found in working directory
+  * Directory
+  * Contains the filtered GFFs of each gene
+
+* tblastn_gff_filtered/not_found.txt
+  * Found in working directory
+  * File
+  * Keeps track of genes not found when creating final processed GFF file
+
+* tblastn_log.csv
+  * Found in repository
+  * File
+  * Logs ID, gene, and annotation
+
+* tblastn_merged.gff
+  * Found in repository
+  * File
+  * Final annotated genome for non-model organism
