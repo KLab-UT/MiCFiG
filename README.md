@@ -16,7 +16,7 @@ MiCFiG (MitoCarta Filter GFF) is a bioinformatics tool that uses the MitoCarta g
 
 ## Context
 
-A common practice in bioinformatics is to annotate genomic files. Annotation files (e.g. BED & GFF) contain the locations of known genes in genomic files, acting as a road map for genes of interest. By their definiton, the genomes model organisms are incredibly well-annotated - lots of people have taken to the call and had their work double- & triple-checked. However, the pool of non-model organisms without fully annotated genomes is vast. 
+A common practice in bioinformatics is to annotate genomic files. Annotation files (e.g. BED & GFF) contain the locations of known genes in genomic files, acting as a road map for genes of interest. By their definiton, the genomes of model organisms are incredibly well-annotated - lots of people have taken to the call and had their work double- & triple-checked. However, the pool of non-model organisms without fully annotated genomes is vast. 
 
 MiCFiG aims to make annotation of species with incomprehensive genetic labeling a much easier process. It does so by using BLAST to identify & filter genetic features in non-model organisms based on homologies with model species. The MitoCarta database, a catalog of mitochondrial & nuclear protein-encoding genes in *Homo sapiens* & *Mus musculus*, provides a diving board for such comparisons.
 
