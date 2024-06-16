@@ -20,7 +20,7 @@ python3 "$script_dir/filter_gff.py" $outputDir/tblastn_bed_files $gff_path $outp
 
 # Add gene names from MitoCarta database to individual GFF files of species
 
-
+python3 "$script_dir/add_gene_name.sh" "$script_dir/mitocarta_proteins.fasta" "$ouput_dir/tblastn_gff_filtered"
 
 #Process filtered gff files
 python3 "$script_dir/process_gffs.py" "$script_dir/genes_ids.csv" $outputDir/tblastn_gff_filtered/ "$script_dir/tblastn_log.csv" "$script_dir/tblastn_merged.gff" $outputDir/tblastn_gff_filtered/not_found.txt
