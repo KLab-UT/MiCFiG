@@ -6,17 +6,17 @@ outputDir=/scratch/general/nfs1/utu_4310/MiCFiG_wd
 script_dir="$(dirname "$(realpath "$0")")"
 
 # Make individual fasta files for blast queries 
-python3 "$script_dir/split_fasta.py" "$script_dir/mitocarta_proteins.fasta" "$script_dir/fastas/proteins/"
+# python3 "$script_dir/split_fasta.py" "$script_dir/mitocarta_proteins.fasta" "$script_dir/fastas/proteins/"
 
 # Use tblastn with protein_fastas to search for alignments in blast_db
-bash "$script_dir/blast_script.sh" -d "$script_dir/fastas/proteins" -b $blast_db -o $outputDir/blast_results/tblastn_output -t tblastn
+# bash "$script_dir/blast_script.sh" -d "$script_dir/fastas/proteins" -b $blast_db -o $outputDir/blast_results/tblastn_output -t tblastn
 
 # Convert tblastn results to bed files
-bash "$script_dir/process_blast_results.sh" $outputDir/blast_results/tblastn_output/ $outputDir/tblastn_bed_files/ "$script_dir/genes_ids.csv"
+# bash "$script_dir/process_blast_results.sh" $outputDir/blast_results/tblastn_output/ $outputDir/tblastn_bed_files/ "$script_dir/genes_ids.csv"
 
 # Filter gff with tblastn BED files
-rm -rf /scratch/general/nfs1/utu_4310/MiCFiG_wd/tblastn_gff_filtered
-python3 "$script_dir/filter_gff.py" $outputDir/tblastn_bed_files $gff_path $outputDir/tblastn_gff_filtered "$script_dir/genes_ids.csv"
+#rm -rf /scratch/general/nfs1/utu_4310/MiCFiG_wd/tblastn_gff_filtered
+#python3 "$script_dir/filter_gff.py" $outputDir/tblastn_bed_files $gff_path $outputDir/tblastn_gff_filtered "$script_dir/genes_ids.csv"
 
 # Add gene names from MitoCarta database to individual GFF files of species
 
