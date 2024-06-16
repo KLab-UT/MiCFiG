@@ -12,6 +12,7 @@ while read -r file_id gene_name; do
 	gff_file="${input_gff_dir}/${file_id}.gff"
 	if [ -f "$gff_file" ]; then
 		if grep -q "mito_carta_id=${gene_name}" "$gff_file"; then
+  			echo "Already added."
 			exit 0
                 else	
 			sed -i "s#blast_id=#mito_carta_id=${gene_name};blast_id=#" "$gff_file"
