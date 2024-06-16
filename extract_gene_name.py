@@ -12,7 +12,6 @@ def extract_gene_name(in_fasta, out_txt):
         if len(head_split) == 3:
             extract = head_split[0] + "\t" + head_split[2]
             out_txt.write(extract + "\n")
-            print("Extract complete!")
     in_fasta.close()
     out_txt.close()
 
@@ -24,5 +23,6 @@ def main():
     extract_gene_name(args.input, args.output)
 
 if __name__=="__main__":
+    print("Extracting...")
     main()
-    print("Done!")
+    print("Extraction completed!")
